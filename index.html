@@ -1,0 +1,2263 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AD AGENCY | Strategic Advertising & Creative Agency</title>
+  <meta name="description" content="AD AGENCY brings strategy, high-velocity creativity, and enterprise marketing technology together to build category-defining brands and scalable business growth.">
+  
+  <!-- Google Fonts: Space Grotesk & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              black: '#070A0F',
+              dark: '#0B111D',
+              surface: '#111A2C',
+              surfaceHover: '#18253E',
+              border: 'rgba(255, 255, 255, 0.08)',
+              borderFocus: 'rgba(59, 130, 246, 0.4)',
+              primary: '#2F6BFF',
+              primaryHover: '#1D55E6',
+              accent: '#38BDF8',
+              glow: 'rgba(47, 107, 255, 0.25)',
+              textMuted: '#94A3B8',
+              textSubtle: '#64748B',
+              textLight: '#F8FAFC'
+            }
+          },
+          boxShadow: {
+            'glow': '0 0 40px -10px rgba(47, 107, 255, 0.35)',
+            'card': '0 20px 40px -15px rgba(0, 0, 0, 0.5)',
+            'premium': '0 10px 30px -5px rgba(0, 0, 0, 0.8), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)',
+          },
+          animation: {
+            'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float-slow': 'float 7s ease-in-out infinite',
+            'marquee': 'marquee 28s linear infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom refined scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #070A0F;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #2F6BFF;
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 50%, #94A3B8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .text-gradient-primary {
+      background: linear-gradient(135deg, #FFFFFF 20%, #60A5FA 70%, #2F6BFF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .noise-bg {
+      background-image: radial-gradient(rgba(47, 107, 255, 0.04) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .glass-panel {
+      background: rgba(17, 26, 44, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-input {
+      background: rgba(11, 17, 29, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.25s ease;
+    }
+    .glass-input:focus {
+      border-color: #2F6BFF;
+      box-shadow: 0 0 15px rgba(47, 107, 255, 0.3);
+      outline: none;
+    }
+    /* Tab Transitions */
+    .page-view {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+    .page-view.active {
+      display: block;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="bg-brand-black text-brand-textLight font-sans antialiased selection:bg-brand-primary selection:text-white relative min-h-screen overflow-x-hidden">
+
+  <!-- TOP CONCEPT NOTICE BANNER (Discreet, professional) -->
+  <div class="bg-brand-dark/95 border-b border-brand-border py-1.5 px-4 text-center text-xs tracking-wider font-mono text-brand-textSubtle z-50 relative flex items-center justify-center gap-2">
+    <span class="inline-block w-2 h-2 rounded-full bg-blue-500 animate-ping"></span>
+    <span>CONCEPT DEMONSTRATION PLATFORM — DESIGNED FOR ENTERPRISE REVIEW (SAMPLE CONTENT)</span>
+    <button onclick="this.parentElement.remove()" class="text-slate-500 hover:text-white ml-2 text-sm leading-none" title="Dismiss banner">&times;</button>
+  </div>
+
+  <!-- STICKY GLOBAL HEADER -->
+  <header id="mainHeader" class="sticky top-0 z-40 transition-all duration-300 py-4 px-6 md:px-12 backdrop-blur-md bg-brand-black/75 border-b border-transparent">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Logo: Editable Vector Monogram -->
+      <a href="#home" onclick="switchPage('home')" class="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary rounded-lg p-1">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-primary to-blue-900 flex items-center justify-center shadow-lg shadow-brand-glow group-hover:scale-105 transition-transform duration-300">
+          <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-lg tracking-wider text-white flex items-center gap-1">
+            AD AGENCY<span class="text-brand-primary font-black">.</span>
+          </span>
+          <span class="text-[9px] tracking-[0.25em] text-brand-textMuted uppercase font-semibold">Strategic Agency</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-1 bg-brand-dark/70 px-3 py-1.5 rounded-full border border-brand-border">
+        <button onclick="switchPage('home')" class="nav-btn px-4 py-2 text-sm font-medium rounded-full transition-all text-white hover:text-white" data-target="home">Home</button>
+        <button onclick="switchPage('about')" class="nav-btn px-4 py-2 text-sm font-medium rounded-full transition-all text-brand-textMuted hover:text-white" data-target="about">About</button>
+        <button onclick="switchPage('services')" class="nav-btn px-4 py-2 text-sm font-medium rounded-full transition-all text-brand-textMuted hover:text-white" data-target="services">Services</button>
+        <button onclick="switchPage('industries')" class="nav-btn px-4 py-2 text-sm font-medium rounded-full transition-all text-brand-textMuted hover:text-white" data-target="industries">Industries</button>
+        <button onclick="switchPage('work')" class="nav-btn px-4 py-2 text-sm font-medium rounded-full transition-all text-brand-textMuted hover:text-white" data-target="work">Our Work</button>
+        <button onclick="switchPage('insights')" class="nav-btn px-4 py-2 text-sm font-medium rounded-full transition-all text-brand-textMuted hover:text-white" data-target="insights">Insights</button>
+      </nav>
+
+      <!-- Action Button & Mobile Hamburger -->
+      <div class="flex items-center gap-3">
+        <button onclick="switchPage('contact')" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-brand-primary to-blue-600 hover:from-blue-600 hover:to-brand-primary text-white text-xs md:text-sm font-semibold tracking-wide uppercase px-5 py-2.5 rounded-full shadow-lg shadow-brand-glow hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+        </button>
+
+        <button id="mobileMenuBtn" aria-label="Toggle navigation menu" class="lg:hidden w-10 h-10 rounded-xl bg-brand-surface border border-brand-border flex items-center justify-center text-white focus:outline-none">
+          <i class="fa-solid fa-bars text-base" id="menuIcon"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden mt-3 p-4 rounded-2xl bg-brand-surface border border-brand-border flex flex-col gap-2 transition-all duration-300">
+      <button onclick="mobileNav('home')" class="text-left px-4 py-2.5 rounded-lg text-sm font-medium text-white hover:bg-brand-surfaceHover flex justify-between items-center">
+        <span>Home</span><i class="fa-solid fa-chevron-right text-xs text-brand-textSubtle"></i>
+      </button>
+      <button onclick="mobileNav('about')" class="text-left px-4 py-2.5 rounded-lg text-sm font-medium text-brand-textMuted hover:bg-brand-surfaceHover flex justify-between items-center">
+        <span>About Agency</span><i class="fa-solid fa-chevron-right text-xs text-brand-textSubtle"></i>
+      </button>
+      <button onclick="mobileNav('services')" class="text-left px-4 py-2.5 rounded-lg text-sm font-medium text-brand-textMuted hover:bg-brand-surfaceHover flex justify-between items-center">
+        <span>Services & Capabilities</span><i class="fa-solid fa-chevron-right text-xs text-brand-textSubtle"></i>
+      </button>
+      <button onclick="mobileNav('industries')" class="text-left px-4 py-2.5 rounded-lg text-sm font-medium text-brand-textMuted hover:bg-brand-surfaceHover flex justify-between items-center">
+        <span>Target Industries</span><i class="fa-solid fa-chevron-right text-xs text-brand-textSubtle"></i>
+      </button>
+      <button onclick="mobileNav('work')" class="text-left px-4 py-2.5 rounded-lg text-sm font-medium text-brand-textMuted hover:bg-brand-surfaceHover flex justify-between items-center">
+        <span>Featured Case Studies</span><i class="fa-solid fa-chevron-right text-xs text-brand-textSubtle"></i>
+      </button>
+      <button onclick="mobileNav('insights')" class="text-left px-4 py-2.5 rounded-lg text-sm font-medium text-brand-textMuted hover:bg-brand-surfaceHover flex justify-between items-center">
+        <span>Strategic Insights</span><i class="fa-solid fa-chevron-right text-xs text-brand-textSubtle"></i>
+      </button>
+      <button onclick="mobileNav('contact')" class="text-left px-4 py-2.5 rounded-lg text-sm font-semibold text-brand-primary bg-brand-primary/10 border border-brand-primary/20 flex justify-between items-center mt-2">
+        <span>Start Consultation</span><i class="fa-solid fa-arrow-right text-xs"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ======================================================== -->
+  <!-- PAGE VIEW: 01 - HOME                                     -->
+  <!-- ======================================================== -->
+  <main id="view-home" class="page-view active">
+    
+    <!-- HERO SECTION -->
+    <section class="relative pt-12 pb-24 md:pt-20 md:pb-32 overflow-hidden noise-bg">
+      <!-- Ambient Glow Accents -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[900px] h-[400px] bg-gradient-to-tr from-brand-primary/20 via-blue-600/10 to-transparent blur-[140px] pointer-events-none -z-10"></div>
+      <div class="absolute top-10 right-10 w-72 h-72 bg-blue-500/10 rounded-full blur-[90px] pointer-events-none -z-10"></div>
+
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Editorial Copy Column -->
+          <div class="lg:col-span-7 flex flex-col items-start space-y-6">
+            
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-brand-surface/90 border border-brand-border text-xs tracking-wider uppercase text-blue-400 font-semibold shadow-inner">
+              <span class="w-2 h-2 rounded-full bg-brand-primary shadow-sm shadow-blue-400"></span>
+              Enterprise Digital Growth Agency
+            </div>
+
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.08] text-white">
+              We Turn Marketing <br class="hidden sm:inline">Ambition Into <br>
+              <span class="text-gradient-primary">Measurable Growth.</span>
+            </h1>
+
+            <p class="text-brand-textMuted text-base md:text-lg lg:text-xl max-w-2xl leading-relaxed font-normal">
+              We bring strategy, creative mastery, and modern marketing technology together to help established enterprises outpace their markets, build unassailable brand equity, and generate predictable pipeline.
+            </p>
+
+            <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+              <button onclick="switchPage('contact')" class="inline-flex justify-center items-center gap-3 bg-brand-primary hover:bg-brand-primaryHover text-white px-8 py-4 rounded-full font-semibold text-sm tracking-wide shadow-xl shadow-brand-glow transition-all duration-300 transform hover:-translate-y-0.5">
+                <span>Let's Discuss Your Goals</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button onclick="switchPage('work')" class="inline-flex justify-center items-center gap-2.5 bg-brand-surface hover:bg-brand-surfaceHover text-slate-200 border border-brand-border px-7 py-4 rounded-full font-semibold text-sm tracking-wide transition-all duration-200">
+                <i class="fa-regular fa-circle-play text-blue-400"></i>
+                <span>Explore Showcase</span>
+              </button>
+            </div>
+
+            <!-- Mini Trust Stats -->
+            <div class="pt-6 border-t border-brand-border/60 grid grid-cols-3 gap-6 sm:gap-10 w-full max-w-xl">
+              <div>
+                <p class="font-display text-2xl md:text-3xl font-bold text-white tracking-tight">$180M+</p>
+                <p class="text-xs text-brand-textSubtle tracking-wide uppercase mt-0.5">Pipeline Created</p>
+              </div>
+              <div>
+                <p class="font-display text-2xl md:text-3xl font-bold text-white tracking-tight">4.8x</p>
+                <p class="text-xs text-brand-textSubtle tracking-wide uppercase mt-0.5">Median Client ROAS</p>
+              </div>
+              <div>
+                <p class="font-display text-2xl md:text-3xl font-bold text-white tracking-tight">96%</p>
+                <p class="text-xs text-brand-textSubtle tracking-wide uppercase mt-0.5">Annual Retention</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Hero Visual: Dynamic Interactive Media Composition -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              
+              <!-- Main Campaign Showcase Card -->
+              <div class="glass-panel rounded-3xl p-4 md:p-5 shadow-2xl relative z-20 group hover:border-blue-500/40 transition-all duration-500">
+                <div class="relative h-64 sm:h-80 rounded-2xl overflow-hidden bg-brand-dark">
+                  <!-- Visual campaign mockup preview -->
+                  <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80" alt="Creative Campaign Direction" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-90">
+                  <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/40 to-transparent"></div>
+                  
+                  <!-- Tag overlay -->
+                  <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                    <span class="text-[11px] font-mono tracking-wider text-slate-200">OMNI-CHANNEL LIVE</span>
+                  </div>
+
+                  <div class="absolute bottom-4 left-4 right-4">
+                    <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">Campaign Concept</span>
+                    <h3 class="text-lg font-display font-bold text-white leading-tight">Autonomous Scaled Growth</h3>
+                    <p class="text-xs text-slate-300 mt-1 line-clamp-1">Synthesizing audience intent, high-impact creative, and algorithmic paid bidding.</p>
+                  </div>
+                </div>
+
+                <!-- Floating Live Metric pill -->
+                <div class="mt-4 pt-3 border-t border-brand-border flex items-center justify-between text-xs text-brand-textMuted">
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-chart-line text-brand-primary"></i>
+                    <span>Real-Time Acquisition Engine</span>
+                  </div>
+                  <span class="font-mono text-emerald-400 font-medium">+318% YoY Growth</span>
+                </div>
+              </div>
+
+              <!-- Floating Sub-Card: Ad Mockup (Left offset) -->
+              <div class="hidden sm:block absolute -bottom-6 -left-8 z-30 w-64 glass-panel rounded-2xl p-3.5 shadow-2xl border border-white/15 animate-float-slow">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-blue-600/30 flex items-center justify-center text-blue-400 border border-blue-400/30">
+                    <i class="fa-solid fa-wand-magic-sparkles text-sm"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs font-bold text-white">Creative Engine</p>
+                    <p class="text-[10px] text-brand-textMuted">48 High-Velocity Variants</p>
+                  </div>
+                </div>
+                <div class="mt-2.5 h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-blue-500 to-indigo-500 w-4/5 rounded-full"></div>
+                </div>
+              </div>
+
+              <!-- Floating Sub-Card: Platform Badge (Right offset) -->
+              <div class="hidden sm:block absolute -top-5 -right-6 z-30 glass-panel rounded-2xl px-4 py-3 shadow-2xl border border-white/15">
+                <div class="flex items-center gap-2.5">
+                  <div class="flex -space-x-2">
+                    <span class="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center text-[10px] text-white font-bold"><i class="fa-brands fa-google"></i></span>
+                    <span class="w-6 h-6 rounded-full bg-indigo-600 flex items-center justify-center text-[10px] text-white font-bold"><i class="fa-brands fa-meta"></i></span>
+                    <span class="w-6 h-6 rounded-full bg-sky-600 flex items-center justify-center text-[10px] text-white font-bold"><i class="fa-brands fa-linkedin-in"></i></span>
+                  </div>
+                  <span class="text-xs font-semibold text-slate-200">Unified Attribution</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03: TRUST & SAMPLE CLIENT BRAND STRIP -->
+    <section class="py-12 border-y border-brand-border bg-brand-dark/40 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 mb-6 flex flex-col md:flex-row items-center justify-between text-xs tracking-wider text-brand-textSubtle">
+        <span class="uppercase font-semibold tracking-widest text-slate-400">Illustrative Client Brand Concepts & Industries</span>
+        <span class="text-[11px] font-mono mt-1 md:mt-0 text-brand-textSubtle">Representative Portfolio Capabilities</span>
+      </div>
+
+      <!-- Endless Marquee Track -->
+      <div class="relative w-full overflow-hidden flex whitespace-nowrap">
+        <div class="flex items-center gap-12 sm:gap-20 animate-marquee py-2">
+          
+          <!-- Sample Brand 1: Elevate Tech -->
+          <div class="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
+            <svg class="w-7 h-7 text-blue-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 19h20L12 2zm0 4l6.5 11h-13L12 6z"/></svg>
+            <span class="font-display font-bold text-lg tracking-wider text-white">ELEVATE<span class="text-blue-400">.</span>TECH</span>
+          </div>
+
+          <!-- Sample Brand 2: Monarch Living -->
+          <div class="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
+            <svg class="w-7 h-7 text-amber-300" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5 2 7L12 16l-6.5 4.5 2-7L2 9h7z"/></svg>
+            <span class="font-display font-bold text-lg tracking-wider text-white">MONARCH LIVING</span>
+          </div>
+
+          <!-- Sample Brand 3: Verdant Health -->
+          <div class="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
+            <svg class="w-7 h-7 text-emerald-400" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8" stroke="#070A0F" stroke-width="2.5"/></svg>
+            <span class="font-display font-bold text-lg tracking-wider text-white">VERDANT HEALTH</span>
+          </div>
+
+          <!-- Sample Brand 4: Forge Industrial -->
+          <div class="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
+            <svg class="w-7 h-7 text-slate-300" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            <span class="font-display font-bold text-lg tracking-wider text-white">FORGE INDUSTRIAL</span>
+          </div>
+
+          <!-- Sample Brand 5: Aster Commerce -->
+          <div class="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
+            <svg class="w-7 h-7 text-indigo-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4h7.6l-6.2 4.5 2.4 7.4-6.2-4.5-6.2 4.5 2.4-7.4-6.2-4.5h7.6z"/></svg>
+            <span class="font-display font-bold text-lg tracking-wider text-white">ASTER RETAIL</span>
+          </div>
+
+          <!-- Repeated for infinite scroll -->
+          <div class="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
+            <svg class="w-7 h-7 text-blue-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 19h20L12 2zm0 4l6.5 11h-13L12 6z"/></svg>
+            <span class="font-display font-bold text-lg tracking-wider text-white">ELEVATE<span class="text-blue-400">.</span>TECH</span>
+          </div>
+
+          <div class="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
+            <svg class="w-7 h-7 text-amber-300" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5 2 7L12 16l-6.5 4.5 2-7L2 9h7z"/></svg>
+            <span class="font-display font-bold text-lg tracking-wider text-white">MONARCH LIVING</span>
+          </div>
+
+          <div class="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
+            <svg class="w-7 h-7 text-emerald-400" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8" stroke="#070A0F" stroke-width="2.5"/></svg>
+            <span class="font-display font-bold text-lg tracking-wider text-white">VERDANT HEALTH</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 04: ABOUT THE AGENCY SUMMARY -->
+    <section class="py-24 max-w-7xl mx-auto px-6 md:px-12">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left Photography & Studio Composition -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative rounded-3xl overflow-hidden border border-brand-border shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" alt="AD AGENCY Creative & Strategic Studio" class="w-full h-[460px] object-cover filter brightness-95 contrast-105 hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/30 to-transparent"></div>
+            
+            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl glass-panel">
+              <p class="text-xs uppercase font-mono tracking-wider text-blue-400">Core Positioning</p>
+              <p class="text-sm font-medium text-slate-100 mt-1 italic">"We bring strategy, creativity and technology together to build stronger brands and create meaningful business growth."</p>
+            </div>
+          </div>
+          <div class="absolute -bottom-6 -right-6 w-36 h-36 bg-blue-600/10 rounded-full blur-2xl -z-10"></div>
+        </div>
+
+        <!-- Right Content & Strategic Pillar -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 text-xs font-mono tracking-widest text-brand-primary uppercase">
+            <span class="w-6 h-px bg-brand-primary"></span>
+            Agency Philosophy
+          </div>
+
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
+            Creative Thinking. <br>
+            Strategic Execution. <br>
+            <span class="text-gradient-primary">Meaningful Impact.</span>
+          </h2>
+
+          <p class="text-brand-textMuted text-base leading-relaxed">
+            Founded on the conviction that enterprise marketing must deliver measurable commercial returns, AD AGENCY operates as an integrated partner rather than an outsourced vendor. We solve complex go-to-market challenges through rigorous data modeling and arresting creative production.
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-2xl bg-brand-dark/70 border border-brand-border">
+              <div class="w-8 h-8 rounded-lg bg-blue-500/10 text-brand-primary flex items-center justify-center mb-2 font-bold text-sm">01</div>
+              <h4 class="font-bold text-white text-sm">Long-Term Partnership</h4>
+              <p class="text-xs text-brand-textMuted mt-1">Deep institutional immersion aligned with your P&amp;L targets, not vanity metrics.</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-brand-dark/70 border border-brand-border">
+              <div class="w-8 h-8 rounded-lg bg-blue-500/10 text-brand-primary flex items-center justify-center mb-2 font-bold text-sm">02</div>
+              <h4 class="font-bold text-white text-sm">Omni-Channel Synthesis</h4>
+              <p class="text-xs text-brand-textMuted mt-1">Unified creative narrative across programmatic, paid social, search, and web.</p>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <button onclick="switchPage('about')" class="inline-flex items-center gap-2 text-white font-semibold text-sm hover:text-blue-400 transition-colors group">
+              <span>Read Our Full Agency Story &amp; Leadership</span>
+              <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 05: SERVICES & EXPERTISE (Asymmetrical Layout) -->
+    <section class="py-24 bg-brand-dark/50 border-t border-brand-border">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div>
+            <span class="text-xs font-mono tracking-widest text-brand-primary uppercase">Specialized Capabilities</span>
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mt-2">
+              A Complete Creative &amp; <br><span class="text-gradient-primary">Digital Growth Ecosystem.</span>
+            </h2>
+          </div>
+          <p class="text-brand-textMuted max-w-md text-sm leading-relaxed">
+            From performance paid media and conversion optimization to brand transformation and enterprise web engineering, we deliver end-to-end capabilities tailored to mid-market and enterprise requirements.
+          </p>
+        </div>
+
+        <!-- 6 Asymmetric Service Cards -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Service 1: Performance Marketing -->
+          <div class="glass-panel p-8 rounded-3xl flex flex-col justify-between hover:border-brand-primary/50 transition-all duration-500 group relative overflow-hidden">
+            <!-- Background Image Canvas -->
+            <div class="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+              <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/rsp/refs/heads/main/Screenshot%202026-11-10%20014809.png" alt="Performance Marketing Background" class="w-full h-full object-cover object-center opacity-65 group-hover:opacity-85 group-hover:scale-105 transition-all duration-700 filter contrast-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-black/95 via-brand-dark/70 to-brand-dark/40"></div>
+            </div>
+
+            <div class="relative z-10">
+              <div class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 text-brand-primary flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform backdrop-blur-md">
+                <i class="fa-solid fa-chart-pie"></i>
+              </div>
+              <span class="text-xs font-mono text-brand-textSubtle">CAPABILITY 01</span>
+              <h3 class="text-xl font-display font-bold text-white mt-1 mb-3">Performance Marketing</h3>
+              <p class="text-sm text-brand-textMuted leading-relaxed mb-6">
+                Data-engineered acquisition strategies utilizing high-precision audience cohorts across Meta, Google Ads, and Programmatic exchanges to reduce CAC and drive bottom-line revenue.
+              </p>
+              <ul class="text-xs text-slate-300 space-y-2 border-t border-brand-border/60 pt-4">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400 text-[10px]"></i> Full-Funnel Paid Social &amp; Search</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400 text-[10px]"></i> Algorithmic Bid Management</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400 text-[10px]"></i> Advanced Multi-Touch Attribution</li>
+              </ul>
+            </div>
+            <button onclick="openServiceModal('performance')" class="relative z-10 mt-8 pt-4 border-t border-brand-border flex items-center justify-between text-xs font-semibold text-white group-hover:text-blue-400 transition-colors">
+              <span>Explore Performance Model</span>
+              <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+
+          <!-- Service 2: Social Media & Brand Communication -->
+          <div class="glass-panel p-8 rounded-3xl flex flex-col justify-between hover:border-brand-primary/50 transition-all duration-500 group relative overflow-hidden">
+            <!-- Background Image Canvas -->
+            <div class="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+              <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/rsp/refs/heads/main/Screenshot%202026-11-10%20014842.png" alt="Social Media Strategy Background" class="w-full h-full object-cover object-center opacity-65 group-hover:opacity-85 group-hover:scale-105 transition-all duration-700 filter contrast-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-black/95 via-brand-dark/70 to-brand-dark/40"></div>
+            </div>
+
+            <div class="relative z-10">
+              <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform backdrop-blur-md">
+                <i class="fa-solid fa-comments"></i>
+              </div>
+              <span class="text-xs font-mono text-brand-textSubtle">CAPABILITY 02</span>
+              <h3 class="text-xl font-display font-bold text-white mt-1 mb-3">Social &amp; Brand Narrative</h3>
+              <p class="text-sm text-brand-textMuted leading-relaxed mb-6">
+                Transform passive observers into loyal brand advocates through culturally resonant storytelling, targeted community cultivation, and continuous editorial calendars.
+              </p>
+              <ul class="text-xs text-slate-300 space-y-2 border-t border-brand-border/60 pt-4">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400 text-[10px]"></i> High-Impact Social Strategy</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400 text-[10px]"></i> Creator &amp; Influencer Alignment</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400 text-[10px]"></i> Reputation &amp; Community Architecture</li>
+              </ul>
+            </div>
+            <button onclick="openServiceModal('social')" class="relative z-10 mt-8 pt-4 border-t border-brand-border flex items-center justify-between text-xs font-semibold text-white group-hover:text-blue-400 transition-colors">
+              <span>Explore Brand Narrative</span>
+              <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+
+          <!-- Service 3: Creative Production & Advertising Design -->
+          <div class="glass-panel p-8 rounded-3xl flex flex-col justify-between hover:border-brand-primary/50 transition-all duration-500 group relative overflow-hidden">
+            <!-- Background Image Canvas -->
+            <div class="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+              <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/rsp/refs/heads/main/Screenshot%202026-11-10%20014914.png" alt="Creative Production Background" class="w-full h-full object-cover object-center opacity-65 group-hover:opacity-85 group-hover:scale-105 transition-all duration-700 filter contrast-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-black/95 via-brand-dark/70 to-brand-dark/40"></div>
+            </div>
+
+            <div class="relative z-10">
+              <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform backdrop-blur-md">
+                <i class="fa-solid fa-film"></i>
+              </div>
+              <span class="text-xs font-mono text-brand-textSubtle">CAPABILITY 03</span>
+              <h3 class="text-xl font-display font-bold text-white mt-1 mb-3">Creative Production</h3>
+              <p class="text-sm text-brand-textMuted leading-relaxed mb-6">
+                Cinema-grade advertising video, motion graphics, and modular digital asset generation designed to interrupt feeds and convert viewers into high-intent prospects.
+              </p>
+              <ul class="text-xs text-slate-300 space-y-2 border-t border-brand-border/60 pt-4">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400 text-[10px]"></i> Commercial Video &amp; Post-Production</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400 text-[10px]"></i> Modular Creative Sandboxing</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400 text-[10px]"></i> 3D Motion &amp; Visual Effects</li>
+              </ul>
+            </div>
+            <button onclick="openServiceModal('creative')" class="relative z-10 mt-8 pt-4 border-t border-brand-border flex items-center justify-between text-xs font-semibold text-white group-hover:text-blue-400 transition-colors">
+              <span>Explore Creative Production</span>
+              <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+
+          <!-- Service 4: Website Design & Web Development -->
+          <div class="glass-panel p-8 rounded-3xl flex flex-col justify-between hover:border-brand-primary/50 transition-all duration-500 group relative overflow-hidden">
+            <!-- Background Image Canvas -->
+            <div class="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+              <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/rsp/refs/heads/main/Screenshot%202026-11-10%20014939.png" alt="Web Architecture Background" class="w-full h-full object-cover object-center opacity-65 group-hover:opacity-85 group-hover:scale-105 transition-all duration-700 filter contrast-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-black/95 via-brand-dark/70 to-brand-dark/40"></div>
+            </div>
+
+            <div class="relative z-10">
+              <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform backdrop-blur-md">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <span class="text-xs font-mono text-brand-textSubtle">CAPABILITY 04</span>
+              <h3 class="text-xl font-display font-bold text-white mt-1 mb-3">Web Architecture &amp; CRO</h3>
+              <p class="text-sm text-brand-textMuted leading-relaxed mb-6">
+                Bespoke enterprise digital platforms and conversion-engineered landing pages built on modern headless stacks with sub-second page performance.
+              </p>
+              <ul class="text-xs text-slate-300 space-y-2 border-t border-brand-border/60 pt-4">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> Bespoke Web Experiences</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> Headless E-commerce &amp; SaaS Portals</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> Continuous Split-Testing (CRO)</li>
+              </ul>
+            </div>
+            <button onclick="openServiceModal('web')" class="relative z-10 mt-8 pt-4 border-t border-brand-border flex items-center justify-between text-xs font-semibold text-white group-hover:text-blue-400 transition-colors">
+              <span>Explore Web Engineering</span>
+              <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+
+          <!-- Service 5: Branding & Identity Systems -->
+          <div class="glass-panel p-8 rounded-3xl flex flex-col justify-between hover:border-brand-primary/50 transition-all duration-500 group relative overflow-hidden">
+            <!-- Background Image Canvas -->
+            <div class="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+              <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/rsp/refs/heads/main/Screenshot%202026-11-10%20015010.png" alt="Brand Strategy Background" class="w-full h-full object-cover object-center opacity-65 group-hover:opacity-85 group-hover:scale-105 transition-all duration-700 filter contrast-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-black/95 via-brand-dark/70 to-brand-dark/40"></div>
+            </div>
+
+            <div class="relative z-10">
+              <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform backdrop-blur-md">
+                <i class="fa-solid fa-gem"></i>
+              </div>
+              <span class="text-xs font-mono text-brand-textSubtle">CAPABILITY 05</span>
+              <h3 class="text-xl font-display font-bold text-white mt-1 mb-3">Brand Strategy &amp; Identity</h3>
+              <p class="text-sm text-brand-textMuted leading-relaxed mb-6">
+                Defining unassailable market positioning, distinctive visual identity design, corporate brand guidelines, and verbal design systems for ambitious institutions.
+              </p>
+              <ul class="text-xs text-slate-300 space-y-2 border-t border-brand-border/60 pt-4">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Market Positioning &amp; Value Architecture</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Scalable Corporate Design Systems</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Enterprise Brand Governance</li>
+              </ul>
+            </div>
+            <button onclick="openServiceModal('branding')" class="relative z-10 mt-8 pt-4 border-t border-brand-border flex items-center justify-between text-xs font-semibold text-white group-hover:text-blue-400 transition-colors">
+              <span>Explore Brand Identity</span>
+              <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+
+          <!-- Service 6: Search & Organic Growth -->
+          <div class="glass-panel p-8 rounded-3xl flex flex-col justify-between hover:border-brand-primary/50 transition-all duration-500 group relative overflow-hidden">
+            <!-- Background Image Canvas -->
+            <div class="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+              <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/rsp/refs/heads/main/Screenshot%202026-11-10%20015045.png" alt="Search and Organic Growth Background" class="w-full h-full object-cover object-center opacity-65 group-hover:opacity-85 group-hover:scale-105 transition-all duration-700 filter contrast-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-black/95 via-brand-dark/70 to-brand-dark/40"></div>
+            </div>
+
+            <div class="relative z-10">
+              <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform backdrop-blur-md">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+              </div>
+              <span class="text-xs font-mono text-brand-textSubtle">CAPABILITY 06</span>
+              <h3 class="text-xl font-display font-bold text-white mt-1 mb-3">Search &amp; Organic Dominance</h3>
+              <p class="text-sm text-brand-textMuted leading-relaxed mb-6">
+                Technical SEO, semantic content structuring, and authoritative digital PR that systematically captures high-intent organic market share.
+              </p>
+              <ul class="text-xs text-slate-300 space-y-2 border-t border-brand-border/60 pt-4">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Deep Technical Architecture Audits</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Editorial Topic Clustering</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Executive Thought Leadership PR</li>
+              </ul>
+            </div>
+            <button onclick="openServiceModal('seo')" class="relative z-10 mt-8 pt-4 border-t border-brand-border flex items-center justify-between text-xs font-semibold text-white group-hover:text-blue-400 transition-colors">
+              <span>Explore Organic Strategy</span>
+              <i class="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 07: ADVERTISING CHANNELS & PLATFORMS -->
+    <section class="py-20 border-b border-brand-border">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+        <span class="text-xs font-mono tracking-widest text-brand-primary uppercase">Omni-Channel Architecture</span>
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
+          The Right Strategy. Across the Right Channels.
+        </h2>
+        <p class="text-sm text-brand-textMuted max-w-2xl mx-auto mb-12">
+          We navigate complex algorithmic ecosystems with unified creative, rigorous attribution, and channel-native ad production.
+        </p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
+          <!-- Channel 1 -->
+          <div class="p-4 rounded-2xl bg-brand-dark/80 border border-brand-border/70 flex flex-col items-center justify-center hover:border-blue-500/50 transition-colors">
+            <i class="fa-brands fa-google text-2xl text-blue-400 mb-2"></i>
+            <span class="text-xs font-semibold text-slate-200">Google Ads</span>
+          </div>
+          <!-- Channel 2 -->
+          <div class="p-4 rounded-2xl bg-brand-dark/80 border border-brand-border/70 flex flex-col items-center justify-center hover:border-blue-500/50 transition-colors">
+            <i class="fa-brands fa-meta text-2xl text-indigo-400 mb-2"></i>
+            <span class="text-xs font-semibold text-slate-200">Meta Ads</span>
+          </div>
+          <!-- Channel 3 -->
+          <div class="p-4 rounded-2xl bg-brand-dark/80 border border-brand-border/70 flex flex-col items-center justify-center hover:border-blue-500/50 transition-colors">
+            <i class="fa-brands fa-linkedin text-2xl text-sky-400 mb-2"></i>
+            <span class="text-xs font-semibold text-slate-200">LinkedIn B2B</span>
+          </div>
+          <!-- Channel 4 -->
+          <div class="p-4 rounded-2xl bg-brand-dark/80 border border-brand-border/70 flex flex-col items-center justify-center hover:border-blue-500/50 transition-colors">
+            <i class="fa-brands fa-youtube text-2xl text-red-500 mb-2"></i>
+            <span class="text-xs font-semibold text-slate-200">YouTube Video</span>
+          </div>
+          <!-- Channel 5 -->
+          <div class="p-4 rounded-2xl bg-brand-dark/80 border border-brand-border/70 flex flex-col items-center justify-center hover:border-blue-500/50 transition-colors">
+            <i class="fa-brands fa-tiktok text-2xl text-pink-400 mb-2"></i>
+            <span class="text-xs font-semibold text-slate-200">TikTok Direct</span>
+          </div>
+          <!-- Channel 6 -->
+          <div class="p-4 rounded-2xl bg-brand-dark/80 border border-brand-border/70 flex flex-col items-center justify-center hover:border-blue-500/50 transition-colors">
+            <i class="fa-brands fa-pinterest text-2xl text-red-400 mb-2"></i>
+            <span class="text-xs font-semibold text-slate-200">Pinterest</span>
+          </div>
+          <!-- Channel 7 -->
+          <div class="p-4 rounded-2xl bg-brand-dark/80 border border-brand-border/70 flex flex-col items-center justify-center hover:border-blue-500/50 transition-colors">
+            <i class="fa-solid fa-bullhorn text-2xl text-emerald-400 mb-2"></i>
+            <span class="text-xs font-semibold text-slate-200">Programmatic</span>
+          </div>
+          <!-- Channel 8 -->
+          <div class="p-4 rounded-2xl bg-brand-dark/80 border border-brand-border/70 flex flex-col items-center justify-center hover:border-blue-500/50 transition-colors">
+            <i class="fa-solid fa-chart-simple text-2xl text-amber-400 mb-2"></i>
+            <span class="text-xs font-semibold text-slate-200">Attribution</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 08: FEATURED WORK & PORTFOLIO SHOWCASE -->
+    <section class="py-24 max-w-7xl mx-auto px-6 md:px-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="text-xs font-mono tracking-widest text-brand-primary uppercase">Demonstration Work</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mt-2">
+            Ideas That Become Experiences. <br>
+            <span class="text-gradient-primary">Campaigns That Make an Impact.</span>
+          </h2>
+        </div>
+        <button onclick="switchPage('work')" class="inline-flex items-center gap-2 text-sm font-semibold text-blue-400 hover:text-white transition-colors">
+          <span>View All Case Studies</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </button>
+      </div>
+
+      <!-- Portfolio Grid (Top 3 on Home) -->
+      <div class="grid lg:grid-cols-3 gap-8">
+        
+        <!-- Project 1: Elevate Tech -->
+        <div class="glass-panel rounded-3xl overflow-hidden group hover:border-brand-primary/50 transition-all duration-300 flex flex-col">
+          <div class="relative h-64 overflow-hidden bg-brand-dark">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Elevate Technologies" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-[10px] uppercase font-mono px-3 py-1 rounded-full text-blue-400 border border-white/10">Technology / SaaS</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-display font-bold text-white mb-2">Elevate Technologies</h3>
+              <p class="text-xs text-brand-textMuted leading-relaxed mb-4">Complete enterprise brand refresh, pipeline marketing strategy, and multi-tier LinkedIn ad sequences for Series B cloud platform.</p>
+            </div>
+            <div class="pt-4 border-t border-brand-border flex items-center justify-between">
+              <div>
+                <span class="text-xs font-bold text-emerald-400">+240%</span>
+                <span class="text-[10px] text-brand-textSubtle ml-1">Qualified SQLs</span>
+              </div>
+              <button onclick="openCaseStudyModal(0)" class="text-xs font-semibold text-blue-400 hover:text-white flex items-center gap-1.5">
+                <span>Case Study</span><i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Monarch Living -->
+        <div class="glass-panel rounded-3xl overflow-hidden group hover:border-brand-primary/50 transition-all duration-300 flex flex-col">
+          <div class="relative h-64 overflow-hidden bg-brand-dark">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Monarch Living" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-[10px] uppercase font-mono px-3 py-1 rounded-full text-amber-300 border border-white/10">Luxury Real Estate</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-display font-bold text-white mb-2">Monarch Living Residences</h3>
+              <p class="text-xs text-brand-textMuted leading-relaxed mb-4">High-fidelity 3D architectural renders, aspirational video campaign, and ultra-targeted high-net-worth investor acquisition.</p>
+            </div>
+            <div class="pt-4 border-t border-brand-border flex items-center justify-between">
+              <div>
+                <span class="text-xs font-bold text-amber-300">$64M</span>
+                <span class="text-[10px] text-brand-textSubtle ml-1">Pre-Sale Inventory Sold</span>
+              </div>
+              <button onclick="openCaseStudyModal(1)" class="text-xs font-semibold text-blue-400 hover:text-white flex items-center gap-1.5">
+                <span>Case Study</span><i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Verdant Health -->
+        <div class="glass-panel rounded-3xl overflow-hidden group hover:border-brand-primary/50 transition-all duration-300 flex flex-col">
+          <div class="relative h-64 overflow-hidden bg-brand-dark">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Verdant Health" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-[10px] uppercase font-mono px-3 py-1 rounded-full text-emerald-400 border border-white/10">Healthcare &amp; Bio</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-display font-bold text-white mb-2">Verdant Health Systems</h3>
+              <p class="text-xs text-brand-textMuted leading-relaxed mb-4">Patient-centric digital intake portal, localized search dominance, and compliant performance acquisition for national clinic network.</p>
+            </div>
+            <div class="pt-4 border-t border-brand-border flex items-center justify-between">
+              <div>
+                <span class="text-xs font-bold text-emerald-400">-41%</span>
+                <span class="text-[10px] text-brand-textSubtle ml-1">Cost Per Patient Acq</span>
+              </div>
+              <button onclick="openCaseStudyModal(2)" class="text-xs font-semibold text-blue-400 hover:text-white flex items-center gap-1.5">
+                <span>Case Study</span><i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 10: OUR STRATEGIC PROCESS -->
+    <section class="py-24 bg-brand-dark/40 border-y border-brand-border">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs font-mono tracking-widest text-brand-primary uppercase">The AD AGENCY Methodology</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">
+            From Business Challenge to Strategic Execution
+          </h2>
+          <p class="text-sm text-brand-textMuted mt-3">
+            A battle-tested 4-stage framework ensuring that every creative dollar spent aligns with measurable commercial outcomes.
+          </p>
+        </div>
+
+        <!-- 4 Step Process Horizontal on Desktop, Vertical on Mobile -->
+        <div class="grid md:grid-cols-4 gap-6 relative">
+          
+          <!-- Step 1 -->
+          <div class="glass-panel p-6 rounded-2xl relative border-t-2 border-t-blue-500">
+            <span class="font-display text-3xl font-bold text-blue-500/40">01</span>
+            <h3 class="text-base font-bold text-white mt-2 mb-1">Discovery &amp; Audit</h3>
+            <p class="text-xs text-brand-textMuted leading-relaxed">
+              In-depth analysis of your financial targets, competitive moat, existing attribution data, and customer lifetime value.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="glass-panel p-6 rounded-2xl relative border-t-2 border-t-indigo-500">
+            <span class="font-display text-3xl font-bold text-indigo-500/40">02</span>
+            <h3 class="text-base font-bold text-white mt-2 mb-1">Strategy &amp; Creative Plan</h3>
+            <p class="text-xs text-brand-textMuted leading-relaxed">
+              Formulation of channel-specific media allocations, messaging architecture, and creative test matrix.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="glass-panel p-6 rounded-2xl relative border-t-2 border-t-cyan-500">
+            <span class="font-display text-3xl font-bold text-cyan-500/40">03</span>
+            <h3 class="text-base font-bold text-white mt-2 mb-1">Execution &amp; Launch</h3>
+            <p class="text-xs text-brand-textMuted leading-relaxed">
+              Rapid rollout of production assets, pixel-perfect tracking setups, algorithmic bidding structures, and landing pages.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="glass-panel p-6 rounded-2xl relative border-t-2 border-t-emerald-500">
+            <span class="font-display text-3xl font-bold text-emerald-500/40">04</span>
+            <h3 class="text-base font-bold text-white mt-2 mb-1">Iteration &amp; Scale</h3>
+            <p class="text-xs text-brand-textMuted leading-relaxed">
+              Weekly attribution modeling, creative refresh cycles, and strategic capital reallocation toward winning cohorts.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 12: RESULTS & STATS -->
+    <section class="py-20 relative noise-bg">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="glass-panel p-10 md:p-14 rounded-3xl border border-brand-border shadow-2xl">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y lg:divide-y-0 lg:divide-x divide-brand-border">
+            
+            <div class="pt-4 lg:pt-0">
+              <p class="font-display text-4xl sm:text-5xl font-extrabold text-white tracking-tight">250<span class="text-brand-primary">+</span></p>
+              <p class="text-xs text-brand-textMuted uppercase tracking-wider font-semibold mt-2">Projects Delivered</p>
+              <span class="text-[10px] text-brand-textSubtle block mt-1">(Sample Demo Metric)</span>
+            </div>
+
+            <div class="pt-4 lg:pt-0">
+              <p class="font-display text-4xl sm:text-5xl font-extrabold text-white tracking-tight">85<span class="text-brand-primary">+</span></p>
+              <p class="text-xs text-brand-textMuted uppercase tracking-wider font-semibold mt-2">Enterprise Clients</p>
+              <span class="text-[10px] text-brand-textSubtle block mt-1">(Sample Demo Metric)</span>
+            </div>
+
+            <div class="pt-4 lg:pt-0">
+              <p class="font-display text-4xl sm:text-5xl font-extrabold text-white tracking-tight">120<span class="text-brand-primary">+</span></p>
+              <p class="text-xs text-brand-textMuted uppercase tracking-wider font-semibold mt-2">Campaigns Deployed</p>
+              <span class="text-[10px] text-brand-textSubtle block mt-1">(Sample Demo Metric)</span>
+            </div>
+
+            <div class="pt-4 lg:pt-0">
+              <p class="font-display text-4xl sm:text-5xl font-extrabold text-white tracking-tight">12<span class="text-brand-primary">+</span></p>
+              <p class="text-xs text-brand-textMuted uppercase tracking-wider font-semibold mt-2">Specialized Sectors</p>
+              <span class="text-[10px] text-brand-textSubtle block mt-1">(Sample Demo Metric)</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 14: CLIENT TESTIMONIALS -->
+    <section class="py-24 max-w-7xl mx-auto px-6 md:px-12">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-mono tracking-widest text-brand-primary uppercase">Executive Partnerships</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">
+          Trusted Partnerships. Meaningful Experiences.
+        </h2>
+        <p class="text-xs text-brand-textSubtle mt-2 font-mono uppercase tracking-wider">[ Illustrative Client Endorsements ]</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Testimonial 1 -->
+        <div class="glass-panel p-8 rounded-3xl flex flex-col justify-between border border-brand-border/80">
+          <div>
+            <div class="flex text-amber-400 text-xs mb-4 gap-1">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed italic mb-6">
+              "AD AGENCY completely transformed how we approach pipeline acquisition. Rather than simply spending media budget, they built an autonomous data engine that directly drove our Series B enterprise valuation."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-brand-border">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Sarah Lin" class="w-10 h-10 rounded-full object-cover border border-white/20">
+            <div>
+              <p class="text-xs font-bold text-white">Sarah Lin</p>
+              <p class="text-[11px] text-brand-textMuted">Chief Marketing Officer, Elevate Tech</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="glass-panel p-8 rounded-3xl flex flex-col justify-between border border-brand-border/80">
+          <div>
+            <div class="flex text-amber-400 text-xs mb-4 gap-1">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed italic mb-6">
+              "Their creative direction was nothing short of extraordinary. The cinema-grade video spots and 3D architectural showcases sold out our luxury waterfront development 4 months ahead of forecast."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-brand-border">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Marcus Sterling" class="w-10 h-10 rounded-full object-cover border border-white/20">
+            <div>
+              <p class="text-xs font-bold text-white">Marcus Sterling</p>
+              <p class="text-[11px] text-brand-textMuted">Managing Director, Monarch Living</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="glass-panel p-8 rounded-3xl flex flex-col justify-between border border-brand-border/80">
+          <div>
+            <div class="flex text-amber-400 text-xs mb-4 gap-1">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed italic mb-6">
+              "In healthcare, trust and regulatory compliance are non-negotiable. AD AGENCY bridged the gap between strict HIPAA guidelines and high-converting patient acquisition seamlessly."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-brand-border">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" alt="Dr. Aris Thorne" class="w-10 h-10 rounded-full object-cover border border-white/20">
+            <div>
+              <p class="text-xs font-bold text-white">Dr. Aris Thorne</p>
+              <p class="text-[11px] text-brand-textMuted">VP of Growth, Verdant Health</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 16: FAQ ACCORDION -->
+    <section class="py-24 bg-brand-dark/40 border-t border-brand-border">
+      <div class="max-w-4xl mx-auto px-6">
+        
+        <div class="text-center mb-16">
+          <span class="text-xs font-mono tracking-widest text-brand-primary uppercase">Clarifying Engagement</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-sm text-brand-textMuted mt-2">Everything you need to know about partnering with Northstar Digital.</p>
+        </div>
+
+        <div class="space-y-4" id="faqAccordionContainer">
+          
+          <!-- Item 1 -->
+          <div class="glass-panel rounded-2xl overflow-hidden border border-brand-border">
+            <button class="faq-toggle w-full p-6 text-left flex justify-between items-center text-white font-medium text-base hover:text-blue-400 transition-colors" onclick="toggleFaq(this)">
+              <span>What profile of business does AD AGENCY partner with?</span>
+              <i class="fa-solid fa-chevron-down text-xs text-brand-textSubtle transition-transform duration-200"></i>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-sm text-brand-textMuted leading-relaxed border-t border-brand-border/40 pt-4">
+              We primarily engage with mid-market enterprises, well-capitalized tech scale-ups, multi-location healthcare systems, and established direct-to-consumer e-commerce companies typically investing $15k to $250k+ in monthly marketing.
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="glass-panel rounded-2xl overflow-hidden border border-brand-border">
+            <button class="faq-toggle w-full p-6 text-left flex justify-between items-center text-white font-medium text-base hover:text-blue-400 transition-colors" onclick="toggleFaq(this)">
+              <span>Do you provide customized marketing strategies rather than standard packages?</span>
+              <i class="fa-solid fa-chevron-down text-xs text-brand-textSubtle transition-transform duration-200"></i>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-sm text-brand-textMuted leading-relaxed border-t border-brand-border/40 pt-4">
+              Yes. We do not offer generic marketing retainers. Every client engagement begins with a bespoke discovery sprint where we analyze your unit economics, customer journey, and historical data to assemble a dedicated multidisciplinary pod.
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="glass-panel rounded-2xl overflow-hidden border border-brand-border">
+            <button class="faq-toggle w-full p-6 text-left flex justify-between items-center text-white font-medium text-base hover:text-blue-400 transition-colors" onclick="toggleFaq(this)">
+              <span>How transparent is your campaign reporting and attribution?</span>
+              <i class="fa-solid fa-chevron-down text-xs text-brand-textSubtle transition-transform duration-200"></i>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-sm text-brand-textMuted leading-relaxed border-t border-brand-border/40 pt-4">
+              We provide 24/7 access to live enterprise dashboards (Looker / PowerBI) integrated directly with your CRM and ad channels. You have complete transparency over every dollar allocated, customer acquisition cost (CAC), and multi-touch pipeline attribution.
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="glass-panel rounded-2xl overflow-hidden border border-brand-border">
+            <button class="faq-toggle w-full p-6 text-left flex justify-between items-center text-white font-medium text-base hover:text-blue-400 transition-colors" onclick="toggleFaq(this)">
+              <span>How quickly can an enterprise engagement commence?</span>
+              <i class="fa-solid fa-chevron-down text-xs text-brand-textSubtle transition-transform duration-200"></i>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-sm text-brand-textMuted leading-relaxed border-t border-brand-border/40 pt-4">
+              Following our initial strategy consultation and scoping agreement, discovery typically launches within 7 to 10 business days. Full campaign execution and live media scaling usually begin within 3 weeks.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 17: FINAL CONVERSION CALL TO ACTION -->
+    <section class="py-24 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-blue-950/20 to-transparent pointer-events-none"></div>
+      
+      <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+        <div class="p-10 sm:p-16 rounded-3xl glass-panel border border-brand-primary/30 shadow-2xl relative overflow-hidden group">
+          
+          <!-- Background Image Canvas -->
+          <div class="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+            <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/rsp/refs/heads/main/Screenshot%202026-11-10%20015553.png" alt="Strategic Execution Background" class="w-full h-full object-cover object-center opacity-65 group-hover:opacity-85 group-hover:scale-105 transition-all duration-700 filter contrast-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black/95 via-brand-dark/80 to-brand-dark/50"></div>
+          </div>
+
+          <div class="absolute -top-24 -left-24 w-72 h-72 bg-brand-primary/20 rounded-full blur-[80px] pointer-events-none"></div>
+          
+          <span class="text-xs font-mono tracking-widest text-brand-primary uppercase">Your Next Strategic Move</span>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold text-white mt-3 mb-6 tracking-tight">
+            Ready to Turn Marketing Ambition <br>Into Measurable Category Dominance?
+          </h2>
+          <p class="text-brand-textMuted text-base max-w-xl mx-auto mb-8 leading-relaxed">
+            Let's evaluate your existing acquisition metrics, pinpoint conversion bottlenecks, and draft an actionable roadmap for sustained growth.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button onclick="switchPage('contact')" class="w-full sm:w-auto bg-brand-primary hover:bg-brand-primaryHover text-white px-8 py-4 rounded-full font-semibold text-sm tracking-wide shadow-xl shadow-brand-glow transition-all">
+              Schedule a Strategy Consultation
+            </button>
+            <button onclick="switchPage('about')" class="w-full sm:w-auto bg-brand-surface hover:bg-brand-surfaceHover text-slate-200 border border-brand-border px-8 py-4 rounded-full font-semibold text-sm tracking-wide transition-all">
+              Learn More About Our Team
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- PAGE VIEW: 02 - ABOUT US                                 -->
+  <!-- ======================================================== -->
+  <main id="view-about" class="page-view">
+    <section class="pt-16 pb-20 max-w-7xl mx-auto px-6 md:px-12">
+      
+      <!-- Header -->
+      <div class="max-w-3xl mb-16">
+        <span class="text-xs font-mono tracking-widest text-brand-primary uppercase">Our Organization</span>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mt-3 mb-6 tracking-tight">
+          We Are Architects of <br><span class="text-gradient-primary">Commercial Resonance.</span>
+        </h1>
+        <p class="text-brand-textMuted text-lg leading-relaxed">
+          AD AGENCY was founded to dissolve the artificial divide between creative branding studios and quantitative performance agencies. We believe enduring market leadership demands both emotional magnetic attraction and computational execution.
+        </p>
+      </div>
+
+      <!-- Studio Imagery & Pillars -->
+      <div class="grid lg:grid-cols-12 gap-12 items-center mb-24">
+        <div class="lg:col-span-7">
+          <div class="rounded-3xl overflow-hidden border border-brand-border shadow-2xl relative">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" alt="AD AGENCY Creative Headquarters" class="w-full h-[400px] object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black/80 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 text-xs font-mono text-slate-300">
+              <span class="text-blue-400 font-bold">STUDIO ENVIRONMENT</span> — COLLABORATIVE STRATEGY LAB
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-5 space-y-6">
+          <h3 class="text-2xl font-display font-bold text-white">The Three Non-Negotiables</h3>
+          <div class="space-y-4">
+            <div class="p-4 rounded-2xl bg-brand-dark/80 border border-brand-border">
+              <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                <i class="fa-solid fa-bullseye text-blue-400"></i> Commercial Alignment
+              </h4>
+              <p class="text-xs text-brand-textMuted mt-1">We tie our success metrics to real enterprise value creation—customer equity, ARR velocity, and net margins.</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-brand-dark/80 border border-brand-border">
+              <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                <i class="fa-solid fa-bolt text-indigo-400"></i> Creative Velocity
+              </h4>
+              <p class="text-xs text-brand-textMuted mt-1">High-volume, high-craft creative iteration prevents audience ad fatigue and continuously lowers blended CPA.</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-brand-dark/80 border border-brand-border">
+              <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-cyan-400"></i> Absolute Transparency
+              </h4>
+              <p class="text-xs text-brand-textMuted mt-1">No hidden markups, no walled gardens. Clients retain full ownership of media accounts, code, and creative assets.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 13: LEADERSHIP TEAM SHOWCASE -->
+      <div class="mb-24">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs font-mono tracking-widest text-brand-primary uppercase">Agency Leadership</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">
+            Creative Minds. Strategic Thinkers.
+          </h2>
+          <p class="text-xs text-brand-textSubtle mt-2 font-mono uppercase tracking-wider">[ Sample Team Profiles — Concept Demonstration ]</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Team Member 1 -->
+          <div class="glass-panel rounded-3xl overflow-hidden border border-brand-border group hover:border-brand-primary/40 transition-all">
+            <div class="relative h-64 overflow-hidden bg-brand-dark">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Elena Vance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-5">
+              <h4 class="text-base font-bold text-white">Elena Vance</h4>
+              <p class="text-xs text-blue-400 font-medium">Founder &amp; Managing Director</p>
+              <p class="text-xs text-brand-textMuted mt-2.5 leading-relaxed">Former Global Brand Strategist leading omni-channel growth for Fortune 500 consumer brands.</p>
+              <div class="flex gap-3 text-slate-400 text-xs mt-4 pt-3 border-t border-brand-border">
+                <a href="#contact" onclick="switchPage('contact')" class="hover:text-blue-400"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#contact" onclick="switchPage('contact')" class="hover:text-blue-400"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="glass-panel rounded-3xl overflow-hidden border border-brand-border group hover:border-brand-primary/40 transition-all">
+            <div class="relative h-64 overflow-hidden bg-brand-dark">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Julian Sterling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-5">
+              <h4 class="text-base font-bold text-white">Julian Sterling</h4>
+              <p class="text-xs text-indigo-400 font-medium">Executive Creative Director</p>
+              <p class="text-xs text-brand-textMuted mt-2.5 leading-relaxed">Award-winning art director specializing in cinematic brand storytelling and digital campaign production.</p>
+              <div class="flex gap-3 text-slate-400 text-xs mt-4 pt-3 border-t border-brand-border">
+                <a href="#contact" onclick="switchPage('contact')" class="hover:text-blue-400"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#contact" onclick="switchPage('contact')" class="hover:text-blue-400"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="glass-panel rounded-3xl overflow-hidden border border-brand-border group hover:border-brand-primary/40 transition-all">
+            <div class="relative h-64 overflow-hidden bg-brand-dark">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Amara Okafor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-5">
+              <h4 class="text-base font-bold text-white">Amara Okafor</h4>
+              <p class="text-xs text-cyan-400 font-medium">Head of Performance Marketing</p>
+              <p class="text-xs text-brand-textMuted mt-2.5 leading-relaxed">Quantitative media buyer overseeing $50M+ annual programmatic and paid social deployment.</p>
+              <div class="flex gap-3 text-slate-400 text-xs mt-4 pt-3 border-t border-brand-border">
+                <a href="#contact" onclick="switchPage('contact')" class="hover:text-blue-400"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#contact" onclick="switchPage('contact')" class="hover:text-blue-400"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 4 -->
+          <div class="glass-panel rounded-3xl overflow-hidden border border-brand-border group hover:border-brand-primary/40 transition-all">
+            <div class="relative h-64 overflow-hidden bg-brand-dark">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="David Chen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-5">
+              <h4 class="text-base font-bold text-white">David Chen</h4>
+              <p class="text-xs text-emerald-400 font-medium">Chief Web Architect &amp; CRO</p>
+              <p class="text-xs text-brand-textMuted mt-2.5 leading-relaxed">Engineers headless web experiences that blend luxury aesthetics with extreme conversion velocity.</p>
+              <div class="flex gap-3 text-slate-400 text-xs mt-4 pt-3 border-t border-brand-border">
+                <a href="#contact" onclick="switchPage('contact')" class="hover:text-blue-400"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#contact" onclick="switchPage('contact')" class="hover:text-blue-400"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- PAGE VIEW: 03 - SERVICES & CAPABILITIES                  -->
+  <!-- ======================================================== -->
+  <main id="view-services" class="page-view">
+    <section class="pt-16 pb-24 max-w-7xl mx-auto px-6 md:px-12">
+      
+      <div class="max-w-3xl mb-16">
+        <span class="text-xs font-mono tracking-widest text-brand-primary uppercase">Full Capabilities Suite</span>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mt-3 mb-6 tracking-tight">
+          Enterprise Services <br><span class="text-gradient-primary">Engineered for Scale.</span>
+        </h1>
+        <p class="text-brand-textMuted text-lg leading-relaxed">
+          We construct specialized multidisciplinary pods to execute end-to-end digital marketing transformations. Explore our six core pillars below.
+        </p>
+      </div>
+
+      <!-- Detailed Service Deep Dives -->
+      <div class="space-y-12">
+        
+        <!-- Deep Dive 1: Performance Marketing -->
+        <div class="glass-panel p-8 md:p-12 rounded-3xl border border-brand-border grid lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-4">
+            <span class="text-xs font-mono text-blue-400 uppercase tracking-widest">Pillar 01 — Demand Generation</span>
+            <h2 class="text-2xl sm:text-3xl font-display font-bold text-white">Performance Marketing &amp; Paid Media</h2>
+            <p class="text-sm text-brand-textMuted leading-relaxed">
+              We deploy sophisticated algorithmic bidding models, dynamic creative optimization (DCO), and proprietary attribution modeling across Google Ads, Meta Ads, YouTube, and LinkedIn.
+            </p>
+            <div class="grid sm:grid-cols-2 gap-3 text-xs text-slate-300 pt-2">
+              <div class="p-3 bg-brand-dark/70 rounded-xl border border-brand-border"><i class="fa-solid fa-check text-blue-400 mr-2"></i> Custom Audience Modeling</div>
+              <div class="p-3 bg-brand-dark/70 rounded-xl border border-brand-border"><i class="fa-solid fa-check text-blue-400 mr-2"></i> Algorithmic ROAS Bidding</div>
+              <div class="p-3 bg-brand-dark/70 rounded-xl border border-brand-border"><i class="fa-solid fa-check text-blue-400 mr-2"></i> Cross-Platform Retargeting</div>
+              <div class="p-3 bg-brand-dark/70 rounded-xl border border-brand-border"><i class="fa-solid fa-check text-blue-400 mr-2"></i> Server-Side Tracking (CAPI)</div>
+            </div>
+            <div class="pt-4">
+              <button onclick="switchPage('contact')" class="inline-flex items-center gap-2 bg-brand-primary hover:bg-brand-primaryHover text-white px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-all">
+                <span>Inquire About Paid Media</span><i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="lg:col-span-5">
+            <div class="rounded-2xl overflow-hidden border border-brand-border shadow-xl">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Performance Marketing Analytics" class="w-full h-64 object-cover">
+            </div>
+          </div>
+        </div>
+
+        <!-- Deep Dive 2: Creative & Video -->
+        <div class="glass-panel p-8 md:p-12 rounded-3xl border border-brand-border grid lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-4">
+            <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">Pillar 02 — High-Craft Production</span>
+            <h2 class="text-2xl sm:text-3xl font-display font-bold text-white">Creative Production &amp; Video Advertising</h2>
+            <p class="text-sm text-brand-textMuted leading-relaxed">
+              We operate an in-house studio producing cinema-grade commercial video, 3D motion design, and modular creative variants designed to win feed attention and convert.
+            </p>
+            <div class="grid sm:grid-cols-2 gap-3 text-xs text-slate-300 pt-2">
+              <div class="p-3 bg-brand-dark/70 rounded-xl border border-brand-border"><i class="fa-solid fa-check text-cyan-400 mr-2"></i> Commercial Live-Action Video</div>
+              <div class="p-3 bg-brand-dark/70 rounded-xl border border-brand-border"><i class="fa-solid fa-check text-cyan-400 mr-2"></i> High-Velocity Social Video Ads</div>
+              <div class="p-3 bg-brand-dark/70 rounded-xl border border-brand-border"><i class="fa-solid fa-check text-cyan-400 mr-2"></i> 3D Product Visualization</div>
+              <div class="p-3 bg-brand-dark/70 rounded-xl border border-brand-border"><i class="fa-solid fa-check text-cyan-400 mr-2"></i> Modular Dynamic Creative (DCO)</div>
+            </div>
+            <div class="pt-4">
+              <button onclick="switchPage('contact')" class="inline-flex items-center gap-2 bg-brand-primary hover:bg-brand-primaryHover text-white px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-all">
+                <span>Inquire About Production</span><i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="lg:col-span-5">
+            <div class="rounded-2xl overflow-hidden border border-brand-border shadow-xl">
+              <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80" alt="Creative Video Production" class="w-full h-64 object-cover">
+            </div>
+          </div>
+        </div>
+
+        <!-- Deep Dive 3: Enterprise Web & CRO -->
+        <div class="glass-panel p-8 md:p-12 rounded-3xl border border-brand-border grid lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-4">
+            <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest">Pillar 03 — Digital Experience</span>
+            <h2 class="text-2xl sm:text-3xl font-display font-bold text-white">Enterprise Web Development &amp; CRO</h2>
+            <p class="text-sm text-brand-textMuted leading-relaxed">
+              We engineer headless digital platforms, interactive web applications, and landing pages that elevate brand prestige while maximizing conversion velocity.
+            </p>
+            <div class="grid sm:grid-cols-2 gap-3 text-xs text-slate-300 pt-2">
+              <div class="p-3 bg-brand-dark/70 rounded-xl border border-brand-border"><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Custom Headless Architecture</div>
+              <div class="p-3 bg-brand-dark/70 rounded-xl border border-brand-border"><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Multivariate Split-Testing (CRO)</div>
+              <div class="p-3 bg-brand-dark/70 rounded-xl border border-brand-border"><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Enterprise Design Systems</div>
+              <div class="p-3 bg-brand-dark/70 rounded-xl border border-brand-border"><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Sub-Second Core Web Vitals</div>
+            </div>
+            <div class="pt-4">
+              <button onclick="switchPage('contact')" class="inline-flex items-center gap-2 bg-brand-primary hover:bg-brand-primaryHover text-white px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-all">
+                <span>Inquire About Web Build</span><i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="lg:col-span-5">
+            <div class="rounded-2xl overflow-hidden border border-brand-border shadow-xl">
+              <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="Web Development Architecture" class="w-full h-64 object-cover">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- PAGE VIEW: 04 - INDUSTRIES                               -->
+  <!-- ======================================================== -->
+  <main id="view-industries" class="page-view">
+    <section class="pt-16 pb-24 max-w-7xl mx-auto px-6 md:px-12">
+      
+      <div class="max-w-3xl mb-16">
+        <span class="text-xs font-mono tracking-widest text-brand-primary uppercase">Sector Specialization</span>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mt-3 mb-6 tracking-tight">
+          Industry Knowledge. <br><span class="text-gradient-primary">Tailored Growth Strategies.</span>
+        </h1>
+        <p class="text-brand-textMuted text-lg leading-relaxed">
+          Generic marketing fails in complex markets. We bring specialized domain expertise, regulatory awareness, and customer journey knowledge across key verticals.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Industry 1: Tech & SaaS -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-brand-border group hover:border-blue-500/50 transition-all flex flex-col justify-between">
+          <div class="p-6">
+            <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-lg mb-4">
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+            <h3 class="text-lg font-display font-bold text-white mb-2">Technology &amp; SaaS</h3>
+            <p class="text-xs text-brand-textMuted leading-relaxed mb-4">
+              Reducing CAC for recurring revenue models. ABM targeting for enterprise buyers and product-led growth trial onboarding.
+            </p>
+          </div>
+          <div class="h-32 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="Technology and SaaS" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+        </div>
+
+        <!-- Industry 2: Healthcare & Life Sciences -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-brand-border group hover:border-emerald-500/50 transition-all flex flex-col justify-between">
+          <div class="p-6">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg mb-4">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <h3 class="text-lg font-display font-bold text-white mb-2">Healthcare &amp; Life Sciences</h3>
+            <p class="text-xs text-brand-textMuted leading-relaxed mb-4">
+              HIPAA-compliant patient acquisition funnels, clinical recruitment campaigns, and institutional trust architecture.
+            </p>
+          </div>
+          <div class="h-32 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80" alt="Healthcare and Wellness" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+        </div>
+
+        <!-- Industry 3: Real Estate & Property -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-brand-border group hover:border-amber-500/50 transition-all flex flex-col justify-between">
+          <div class="p-6">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg mb-4">
+              <i class="fa-solid fa-building"></i>
+            </div>
+            <h3 class="text-lg font-display font-bold text-white mb-2">Real Estate &amp; Property</h3>
+            <p class="text-xs text-brand-textMuted leading-relaxed mb-4">
+              Pre-development luxury inventory sales, immersive 3D virtual walkthroughs, and investor lead generation.
+            </p>
+          </div>
+          <div class="h-32 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Real Estate Property" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+        </div>
+
+        <!-- Industry 4: Manufacturing & Industrial -->
+        <div class="glass-panel rounded-3xl overflow-hidden border border-brand-border group hover:border-purple-500/50 transition-all flex flex-col justify-between">
+          <div class="p-6">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-lg mb-4">
+              <i class="fa-solid fa-gears"></i>
+            </div>
+            <h3 class="text-lg font-display font-bold text-white mb-2">Manufacturing &amp; B2B</h3>
+            <p class="text-xs text-brand-textMuted leading-relaxed mb-4">
+              Contract manufacturing demand capture, supply-chain digital modernization, and high-value RFP generation.
+            </p>
+          </div>
+          <div class="h-32 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Manufacturing Industrial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- PAGE VIEW: 05 - OUR WORK & CASE STUDIES                  -->
+  <!-- ======================================================== -->
+  <main id="view-work" class="page-view">
+    <section class="pt-16 pb-24 max-w-7xl mx-auto px-6 md:px-12">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div class="max-w-3xl">
+          <span class="text-xs font-mono tracking-widest text-brand-primary uppercase">Portfolio &amp; Case Studies</span>
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mt-3 mb-4 tracking-tight">
+            Proof Through <br><span class="text-gradient-primary">Execution &amp; Returns.</span>
+          </h1>
+          <p class="text-brand-textMuted text-base">
+            Detailed case breakdowns of fictional enterprise engagements demonstrating how strategy, creative execution, and algorithmic distribution converge.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex items-center gap-2 bg-brand-surface p-1.5 rounded-full border border-brand-border self-start md:self-end">
+          <button onclick="filterWork('all', this)" class="work-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-brand-primary text-white">All Work</button>
+          <button onclick="filterWork('tech', this)" class="work-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold text-brand-textMuted hover:text-white">Tech</button>
+          <button onclick="filterWork('realestate', this)" class="work-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold text-brand-textMuted hover:text-white">Real Estate</button>
+          <button onclick="filterWork('health', this)" class="work-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold text-brand-textMuted hover:text-white">Health</button>
+        </div>
+      </div>
+
+      <!-- 6 Full Portfolio Showcase Items -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolioContainer">
+        
+        <!-- Item 0: Elevate Tech -->
+        <div class="portfolio-card glass-panel rounded-3xl overflow-hidden border border-brand-border flex flex-col group hover:border-brand-primary/50 transition-all" data-category="tech">
+          <div class="relative h-64 overflow-hidden bg-brand-dark">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Elevate Technologies" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <span class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-[10px] uppercase font-mono px-3 py-1 rounded-full text-blue-400 border border-white/10">Technology / SaaS</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-display font-bold text-white mb-2">Elevate Technologies</h3>
+              <p class="text-xs text-brand-textMuted leading-relaxed mb-4">Multi-channel demand generation and ABM funnel scaling for cloud-native data observability platform.</p>
+            </div>
+            <div class="pt-4 border-t border-brand-border flex items-center justify-between">
+              <span class="text-xs font-bold text-emerald-400">+240% SQL Volume</span>
+              <button onclick="openCaseStudyModal(0)" class="text-xs font-semibold text-blue-400 hover:text-white flex items-center gap-1.5">
+                <span>View Full Study</span><i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 1: Monarch Living -->
+        <div class="portfolio-card glass-panel rounded-3xl overflow-hidden border border-brand-border flex flex-col group hover:border-brand-primary/50 transition-all" data-category="realestate">
+          <div class="relative h-64 overflow-hidden bg-brand-dark">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Monarch Living" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <span class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-[10px] uppercase font-mono px-3 py-1 rounded-full text-amber-300 border border-white/10">Luxury Real Estate</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-display font-bold text-white mb-2">Monarch Residences</h3>
+              <p class="text-xs text-brand-textMuted leading-relaxed mb-4">Aspirational cinematic brand positioning, luxury digital catalog, and hyper-targeted buyer qualification.</p>
+            </div>
+            <div class="pt-4 border-t border-brand-border flex items-center justify-between">
+              <span class="text-xs font-bold text-amber-300">$64M Inventory Sold</span>
+              <button onclick="openCaseStudyModal(1)" class="text-xs font-semibold text-blue-400 hover:text-white flex items-center gap-1.5">
+                <span>View Full Study</span><i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Verdant Health -->
+        <div class="portfolio-card glass-panel rounded-3xl overflow-hidden border border-brand-border flex flex-col group hover:border-brand-primary/50 transition-all" data-category="health">
+          <div class="relative h-64 overflow-hidden bg-brand-dark">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Verdant Health" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <span class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-[10px] uppercase font-mono px-3 py-1 rounded-full text-emerald-400 border border-white/10">Healthcare &amp; Bio</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-display font-bold text-white mb-2">Verdant Health Systems</h3>
+              <p class="text-xs text-brand-textMuted leading-relaxed mb-4">Streamlined patient intake web portal, local search architecture, and compliant acquisition marketing.</p>
+            </div>
+            <div class="pt-4 border-t border-brand-border flex items-center justify-between">
+              <span class="text-xs font-bold text-emerald-400">-41% Patient CAC</span>
+              <button onclick="openCaseStudyModal(2)" class="text-xs font-semibold text-blue-400 hover:text-white flex items-center gap-1.5">
+                <span>View Full Study</span><i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Aster Commerce -->
+        <div class="portfolio-card glass-panel rounded-3xl overflow-hidden border border-brand-border flex flex-col group hover:border-brand-primary/50 transition-all" data-category="tech">
+          <div class="relative h-64 overflow-hidden bg-brand-dark">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="Aster Commerce" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <span class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-[10px] uppercase font-mono px-3 py-1 rounded-full text-indigo-400 border border-white/10">E-Commerce DTC</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-display font-bold text-white mb-2">Aster Lifestyle Retail</h3>
+              <p class="text-xs text-brand-textMuted leading-relaxed mb-4">Complete headless Shopify upgrade, creative performance matrix, and email retention automation.</p>
+            </div>
+            <div class="pt-4 border-t border-brand-border flex items-center justify-between">
+              <span class="text-xs font-bold text-indigo-400">4.6x Blended ROAS</span>
+              <button onclick="openCaseStudyModal(0)" class="text-xs font-semibold text-blue-400 hover:text-white flex items-center gap-1.5">
+                <span>View Full Study</span><i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Forge Industrial -->
+        <div class="portfolio-card glass-panel rounded-3xl overflow-hidden border border-brand-border flex flex-col group hover:border-brand-primary/50 transition-all" data-category="tech">
+          <div class="relative h-64 overflow-hidden bg-brand-dark">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Forge Industrial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <span class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-[10px] uppercase font-mono px-3 py-1 rounded-full text-slate-300 border border-white/10">Industrial / B2B</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-display font-bold text-white mb-2">Forge Robotics</h3>
+              <p class="text-xs text-brand-textMuted leading-relaxed mb-4">B2B commercial positioning, specialized trade lead generation, and interactive product spec configurator.</p>
+            </div>
+            <div class="pt-4 border-t border-brand-border flex items-center justify-between">
+              <span class="text-xs font-bold text-blue-400">+180% High-Value RFPs</span>
+              <button onclick="openCaseStudyModal(1)" class="text-xs font-semibold text-blue-400 hover:text-white flex items-center gap-1.5">
+                <span>View Full Study</span><i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5: Maison Table -->
+        <div class="portfolio-card glass-panel rounded-3xl overflow-hidden border border-brand-border flex flex-col group hover:border-brand-primary/50 transition-all" data-category="realestate">
+          <div class="relative h-64 overflow-hidden bg-brand-dark">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Maison Table" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <span class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-[10px] uppercase font-mono px-3 py-1 rounded-full text-rose-400 border border-white/10">Hospitality Group</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-display font-bold text-white mb-2">Maison Hospitality</h3>
+              <p class="text-xs text-brand-textMuted leading-relaxed mb-4">Culinary video micro-campaigns, dynamic booking funnels, and VIP loyalty community activation.</p>
+            </div>
+            <div class="pt-4 border-t border-brand-border flex items-center justify-between">
+              <span class="text-xs font-bold text-rose-400">98% Table Occupancy</span>
+              <button onclick="openCaseStudyModal(2)" class="text-xs font-semibold text-blue-400 hover:text-white flex items-center gap-1.5">
+                <span>View Full Study</span><i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- PAGE VIEW: 06 - INSIGHTS & EDITORIAL                     -->
+  <!-- ======================================================== -->
+  <main id="view-insights" class="page-view">
+    <section class="pt-16 pb-24 max-w-7xl mx-auto px-6 md:px-12">
+      
+      <div class="max-w-3xl mb-16">
+        <span class="text-xs font-mono tracking-widest text-brand-primary uppercase">Executive Perspectives</span>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mt-3 mb-6 tracking-tight">
+          Perspectives That Move <br><span class="text-gradient-primary">Enterprises Forward.</span>
+        </h1>
+        <p class="text-brand-textMuted text-lg leading-relaxed">
+          In-depth analyses on algorithmic paid media dynamics, enterprise brand governance, and next-generation conversion architecture.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+        
+        <!-- Article 1 -->
+        <article class="glass-panel rounded-3xl overflow-hidden border border-brand-border group hover:border-brand-primary/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Paid Advertising Strategy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-xs text-blue-400 font-mono mb-2">
+                <span>MEDIA STRATEGY</span> &bull; <span>6 MIN READ</span>
+              </div>
+              <h3 class="text-lg font-display font-bold text-white mb-2 leading-snug">
+                Building a Performance-Driven Digital Advertising Strategy for Mid-Market Scale
+              </h3>
+              <p class="text-xs text-brand-textMuted leading-relaxed">
+                Why relying purely on third-party platform algorithms without first-party audience signals leads to unsustainable customer acquisition costs.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 border-t border-brand-border mt-4 flex items-center justify-between text-xs font-semibold text-white">
+            <span class="text-brand-textSubtle">October 24, 2026</span>
+            <span class="text-blue-400 group-hover:translate-x-1 transition-transform">Read Article &rarr;</span>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="glass-panel rounded-3xl overflow-hidden border border-brand-border group hover:border-brand-primary/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=800&q=80" alt="Brand Consistency" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-xs text-indigo-400 font-mono mb-2">
+                <span>BRAND ARCHITECTURE</span> &bull; <span>8 MIN READ</span>
+              </div>
+              <h3 class="text-lg font-display font-bold text-white mb-2 leading-snug">
+                Why Strict Brand Consistency Matters for Established B2B Enterprises
+              </h3>
+              <p class="text-xs text-brand-textMuted leading-relaxed">
+                Bridging the fragmented touchpoints between executive sales presentations, paid social creatives, and corporate website interactions.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 border-t border-brand-border mt-4 flex items-center justify-between text-xs font-semibold text-white">
+            <span class="text-brand-textSubtle">November 02, 2026</span>
+            <span class="text-blue-400 group-hover:translate-x-1 transition-transform">Read Article &rarr;</span>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="glass-panel rounded-3xl overflow-hidden border border-brand-border group hover:border-brand-primary/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Creative Marketing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-xs text-cyan-400 font-mono mb-2">
+                <span>CREATIVE OPTIMIZATION</span> &bull; <span>5 MIN READ</span>
+              </div>
+              <h3 class="text-lg font-display font-bold text-white mb-2 leading-snug">
+                Connecting Cinema-Grade Creative With Measurable Business Outcomes
+              </h3>
+              <p class="text-xs text-brand-textMuted leading-relaxed">
+                How modular video production allows brands to maintain high aesthetic standards while systematically split-testing hooks and calls-to-action.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 border-t border-brand-border mt-4 flex items-center justify-between text-xs font-semibold text-white">
+            <span class="text-brand-textSubtle">November 08, 2026</span>
+            <span class="text-blue-400 group-hover:translate-x-1 transition-transform">Read Article &rarr;</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- PAGE VIEW: 07 - CONTACT & RFP (Enterprise Inquiry)       -->
+  <!-- ======================================================== -->
+  <main id="view-contact" class="page-view">
+    <section class="pt-16 pb-24 max-w-7xl mx-auto px-6 md:px-12">
+      
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16">
+        
+        <!-- Left: Office & Contact Info -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <span class="text-xs font-mono tracking-widest text-brand-primary uppercase">Initiate Partnership</span>
+            <h1 class="font-display text-4xl sm:text-5xl font-bold text-white mt-3 mb-4 tracking-tight">
+              Let's Start a <br><span class="text-gradient-primary">Meaningful Conversation.</span>
+            </h1>
+            <p class="text-brand-textMuted text-sm leading-relaxed">
+              Tell us about your business goals, current bottlenecks, and expected timelines. An executive partner will review your inquiry and schedule an initial consultation.
+            </p>
+          </div>
+
+          <!-- Sample Contact Details (Fictional Placeholders) -->
+          <div class="space-y-4">
+            <div class="p-4 rounded-2xl bg-brand-dark border border-brand-border flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-brand-primary flex items-center justify-center text-base shrink-0 mt-0.5">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-white">Agency Headquarters</p>
+                <p class="text-xs text-brand-textMuted mt-0.5">750 Third Avenue, 24th Floor, New York, NY 10017 (Demo Location)</p>
+                <p class="text-[11px] text-brand-textSubtle">Serving Clients Globally</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-brand-dark border border-brand-border flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-brand-primary flex items-center justify-center text-base shrink-0 mt-0.5">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-white">Direct Correspondence</p>
+                <p class="text-xs text-blue-400 font-mono mt-0.5">hello@adagency-demo.example</p>
+                <p class="text-[11px] text-brand-textSubtle">Executive Desk</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-brand-dark border border-brand-border flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-brand-primary flex items-center justify-center text-base shrink-0 mt-0.5">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-white">Direct Telephone</p>
+                <p class="text-xs text-brand-textMuted mt-0.5">+1 (800) 555-0199 (Sample Placeholder)</p>
+                <p class="text-[11px] text-brand-textSubtle">Mon – Fri, 9am – 6pm EST</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-blue-950/20 border border-blue-500/20 text-xs text-blue-300">
+            <i class="fa-solid fa-shield-halved mr-1.5"></i>
+            <strong>Confidentiality Notice:</strong> Mutual Non-Disclosure Agreements (NDAs) are routinely executed prior to in-depth data audits.
+          </div>
+        </div>
+
+        <!-- Right: Enterprise RFP Form -->
+        <div class="lg:col-span-7">
+          <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-brand-border shadow-2xl relative">
+            
+            <h3 class="text-xl font-display font-bold text-white mb-2">Request an Executive Consultation</h3>
+            <p class="text-xs text-brand-textMuted mb-6">Complete the fields below to receive our formal capabilities deck and initial diagnostic.</p>
+
+            <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
+              
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-medium text-slate-300 mb-1.5">Full Name *</label>
+                  <input type="text" id="formName" required placeholder="e.g. Katherine Sterling" class="glass-input w-full px-4 py-2.5 rounded-xl text-sm text-white placeholder-slate-500">
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-slate-300 mb-1.5">Corporate Email *</label>
+                  <input type="email" id="formEmail" required placeholder="katherine@company.com" class="glass-input w-full px-4 py-2.5 rounded-xl text-sm text-white placeholder-slate-500">
+                </div>
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-medium text-slate-300 mb-1.5">Company Name *</label>
+                  <input type="text" id="formCompany" required placeholder="e.g. Sterling Dynamics" class="glass-input w-full px-4 py-2.5 rounded-xl text-sm text-white placeholder-slate-500">
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-slate-300 mb-1.5">Job Title</label>
+                  <input type="text" id="formTitle" placeholder="e.g. Chief Marketing Officer" class="glass-input w-full px-4 py-2.5 rounded-xl text-sm text-white placeholder-slate-500">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-medium text-slate-300 mb-1.5">Services Required (Select all that apply)</label>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
+                  <label class="flex items-center gap-2 p-2 rounded-lg bg-brand-dark/70 border border-brand-border cursor-pointer hover:bg-brand-surface">
+                    <input type="checkbox" class="accent-brand-primary rounded" value="Performance Marketing" checked>
+                    <span class="text-slate-300">Paid Media</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-2 rounded-lg bg-brand-dark/70 border border-brand-border cursor-pointer hover:bg-brand-surface">
+                    <input type="checkbox" class="accent-brand-primary rounded" value="Creative Production">
+                    <span class="text-slate-300">Creative Video</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-2 rounded-lg bg-brand-dark/70 border border-brand-border cursor-pointer hover:bg-brand-surface">
+                    <input type="checkbox" class="accent-brand-primary rounded" value="Web & CRO">
+                    <span class="text-slate-300">Web &amp; CRO</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-2 rounded-lg bg-brand-dark/70 border border-brand-border cursor-pointer hover:bg-brand-surface">
+                    <input type="checkbox" class="accent-brand-primary rounded" value="Branding">
+                    <span class="text-slate-300">Brand Identity</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-2 rounded-lg bg-brand-dark/70 border border-brand-border cursor-pointer hover:bg-brand-surface">
+                    <input type="checkbox" class="accent-brand-primary rounded" value="Organic SEO">
+                    <span class="text-slate-300">SEO &amp; Content</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-2 rounded-lg bg-brand-dark/70 border border-brand-border cursor-pointer hover:bg-brand-surface">
+                    <input type="checkbox" class="accent-brand-primary rounded" value="Full Retainer">
+                    <span class="text-slate-300">Full Retainer</span>
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-medium text-slate-300 mb-1.5">Estimated Monthly Marketing Investment</label>
+                <select id="formBudget" class="glass-input w-full px-4 py-2.5 rounded-xl text-sm text-white">
+                  <option value="$15k - $30k / mo" class="bg-brand-dark">$15,000 – $30,000 / month</option>
+                  <option value="$30k - $75k / mo" class="bg-brand-dark">$30,000 – $75,000 / month</option>
+                  <option value="$75k - $150k / mo" class="bg-brand-dark" selected>$75,000 – $150,000 / month</option>
+                  <option value="$150k+ / mo" class="bg-brand-dark">$150,000+ / month (Enterprise Tier)</option>
+                  <option value="Undetermined" class="bg-brand-dark">Not yet determined / Exploring</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-medium text-slate-300 mb-1.5">Project Scope &amp; Growth Objectives</label>
+                <textarea id="formMessage" rows="3" placeholder="Briefly describe your current goals, core challenges, and target milestones..." class="glass-input w-full px-4 py-2.5 rounded-xl text-sm text-white placeholder-slate-500"></textarea>
+              </div>
+
+              <div id="formFeedback" class="hidden p-3 rounded-xl text-xs font-medium"></div>
+
+              <button type="submit" id="submitBtn" class="w-full bg-brand-primary hover:bg-brand-primaryHover text-white py-3.5 rounded-xl font-semibold text-sm uppercase tracking-wider shadow-lg shadow-brand-glow transition-all">
+                Submit Consultation Request
+              </button>
+
+              <p class="text-[11px] text-center text-brand-textSubtle mt-2">
+                Demonstration submission workflow. Inquiries logged securely in simulation mode.
+              </p>
+
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- MODAL: DETAILED CASE STUDY VIEWER                        -->
+  <!-- ======================================================== -->
+  <div id="caseStudyModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+    <div class="glass-panel w-full max-w-4xl rounded-3xl border border-brand-border overflow-hidden shadow-2xl relative my-8" onclick="event.stopPropagation()">
+      
+      <!-- Close Button -->
+      <button onclick="closeCaseStudyModal()" class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 border border-white/20 text-white flex items-center justify-center hover:bg-brand-primary transition-colors">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+
+      <div id="caseStudyModalContent">
+        <!-- Dynamically populated by openCaseStudyModal(index) -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- MODAL: DETAILED SERVICE VIEWER                           -->
+  <!-- ======================================================== -->
+  <div id="serviceModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="glass-panel w-full max-w-2xl rounded-3xl border border-brand-border p-8 shadow-2xl relative" onclick="event.stopPropagation()">
+      <button onclick="closeServiceModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-brand-surface border border-white/20 text-white flex items-center justify-center hover:bg-brand-primary transition-colors">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+      <div id="serviceModalBody">
+        <!-- Injected -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- TIMED 15-SECOND CONSULTATION PROMPT                      -->
+  <!-- ======================================================== -->
+  <div id="timedConsultationPrompt" class="fixed bottom-6 right-6 z-40 max-w-sm hidden translate-y-8 opacity-0 transition-all duration-500">
+    <div class="glass-panel p-5 rounded-2xl border border-blue-500/30 shadow-2xl relative">
+      <button onclick="dismissTimedPrompt()" class="absolute top-3 right-3 text-brand-textSubtle hover:text-white text-xs">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="flex items-center gap-3 mb-2">
+        <div class="w-8 h-8 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center text-xs">
+          <i class="fa-solid fa-calendar-check"></i>
+        </div>
+        <span class="text-xs font-bold text-white tracking-wide">Strategy Session</span>
+      </div>
+      <p class="text-xs text-brand-textMuted leading-relaxed mb-3">
+        Looking for a bespoke marketing strategy audit for your enterprise? Speak directly with our leadership team.
+      </p>
+      <div class="flex items-center gap-2">
+        <button onclick="switchPage('contact'); dismissTimedPrompt();" class="text-xs font-semibold bg-brand-primary hover:bg-brand-primaryHover text-white px-4 py-2 rounded-lg transition-colors">
+          Book Consultation
+        </button>
+        <button onclick="dismissTimedPrompt()" class="text-xs text-brand-textMuted hover:text-white px-2 py-2">
+          Maybe Later
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- PERSISTENT WHATSAPP / INSTANT CHAT LAUNCHER               -->
+  <!-- ======================================================== -->
+  <div class="fixed bottom-6 left-6 z-30">
+    <a href="https://wa.me/10000000000?text=Hello%20AD%20AGENCY%2C%20I%20would%20like%20to%20discuss%20our%20marketing%20strategy" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-full shadow-lg shadow-emerald-950/50 hover:shadow-emerald-600/30 transition-all duration-300 transform hover:-translate-y-1 group">
+      <i class="fa-brands fa-whatsapp text-lg"></i>
+      <span class="text-xs font-semibold tracking-wide hidden sm:inline">Direct Chat</span>
+    </a>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- GLOBAL FOOTER                                            -->
+  <!-- ======================================================== -->
+  <footer class="bg-brand-dark border-t border-brand-border pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-16 border-b border-brand-border">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-primary to-blue-900 flex items-center justify-center text-white font-bold text-sm">
+              <i class="fa-solid fa-compass"></i>
+            </div>
+            <span class="font-display font-bold text-lg tracking-wider text-white">AD AGENCY<span class="text-brand-primary">.</span></span>
+          </div>
+          <p class="text-xs text-brand-textMuted max-w-sm leading-relaxed">
+            AD AGENCY unites brand vision, algorithmic paid media, and enterprise web architecture to build scalable, enduring commercial category leaders.
+          </p>
+          <div class="flex gap-4 text-brand-textMuted text-sm pt-2">
+            <a href="#home" class="hover:text-white transition-colors" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#home" class="hover:text-white transition-colors" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#home" class="hover:text-white transition-colors" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#home" class="hover:text-white transition-colors" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div>
+          <h4 class="text-xs font-mono tracking-widest text-white uppercase mb-4">Navigation</h4>
+          <ul class="space-y-2.5 text-xs text-brand-textMuted">
+            <li><button onclick="switchPage('home')" class="hover:text-white transition-colors">Home Experience</button></li>
+            <li><button onclick="switchPage('about')" class="hover:text-white transition-colors">About &amp; Leadership</button></li>
+            <li><button onclick="switchPage('services')" class="hover:text-white transition-colors">Capabilities Suite</button></li>
+            <li><button onclick="switchPage('industries')" class="hover:text-white transition-colors">Target Industries</button></li>
+            <li><button onclick="switchPage('work')" class="hover:text-white transition-colors">Case Studies</button></li>
+            <li><button onclick="switchPage('insights')" class="hover:text-white transition-colors">Strategic Insights</button></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div>
+          <h4 class="text-xs font-mono tracking-widest text-white uppercase mb-4">Core Practices</h4>
+          <ul class="space-y-2.5 text-xs text-brand-textMuted">
+            <li><button onclick="switchPage('services')" class="hover:text-white transition-colors">Performance Marketing</button></li>
+            <li><button onclick="switchPage('services')" class="hover:text-white transition-colors">Commercial Video Production</button></li>
+            <li><button onclick="switchPage('services')" class="hover:text-white transition-colors">Enterprise Web Development</button></li>
+            <li><button onclick="switchPage('services')" class="hover:text-white transition-colors">Corporate Brand Identity</button></li>
+            <li><button onclick="switchPage('services')" class="hover:text-white transition-colors">Technical SEO &amp; Content</button></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Inquiry -->
+        <div>
+          <h4 class="text-xs font-mono tracking-widest text-white uppercase mb-4">Executive Desk</h4>
+          <p class="text-xs text-brand-textMuted leading-relaxed mb-3">
+            750 Third Avenue, 24th Fl<br>
+            New York, NY 10017<br>
+            <span class="text-blue-400 font-mono mt-1 block">hello@adagency-demo.example</span>
+          </p>
+          <button onclick="switchPage('contact')" class="text-xs font-semibold text-white bg-brand-surface hover:bg-brand-surfaceHover border border-brand-border px-4 py-2 rounded-lg transition-colors">
+            Request Proposal
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Legal & Demonstration Sub-Footer -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-brand-textSubtle gap-4">
+        <div>
+          &copy; 2026 AD AGENCY. All illustrative rights reserved.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#about" onclick="switchPage('about')" class="hover:text-slate-400">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="#about" onclick="switchPage('about')" class="hover:text-slate-400">Terms of Representation</a>
+          <span>&bull;</span>
+          <span class="font-mono text-slate-500">Demo Prototype Environment</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ======================================================== -->
+  <!-- JAVASCRIPT: LOGIC & STATE MANAGEMENT                     -->
+  <!-- ======================================================== -->
+  <script>
+    // CASE STUDIES DATA STORE
+    const caseStudies = [
+      {
+        title: "Elevate Technologies — Enterprise SaaS Demand Engine",
+        client: "Elevate Tech",
+        industry: "Cloud Infrastructure / B2B SaaS",
+        metric: "+240% Qualified SQLs | -38% Customer Acquisition Cost",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+        challenge: "Elevate Technologies suffered from fragmented messaging following their Series B funding round. High customer acquisition costs and low sales-accepted lead rates plagued their traditional cold outbound channels.",
+        strategy: "AD AGENCY restructured the enterprise go-to-market motion by deploying full-funnel account-based marketing (ABM) on LinkedIn and Google Search, supported by dynamic customer intent audiences and bespoke interactive calculator landing pages.",
+        creative: "We developed an authoritative visual identity system highlighting enterprise data observability, cinema-grade product explainer motion reels, and executive thought leadership whitepapers.",
+        outcome: "Within 6 months, verified sales-qualified opportunities surged by 240%, while the median enterprise deal size increased by 62% across target Fortune 1000 prospects."
+      },
+      {
+        title: "Monarch Living — Luxury Real Estate Acceleration",
+        client: "Monarch Residences",
+        industry: "Luxury Property & Urban Development",
+        metric: "$64M Pre-Sale Inventory Sold in 120 Days",
+        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+        challenge: "Monarch faced high regional competition for an ultra-luxury waterfront residential tower, requiring rapid pre-sale capital to satisfy financial covenants.",
+        strategy: "We built an invite-only digital acquisition portal combined with high-precision private wealth audience targeting across Meta, programmatic CTV, and executive financial publications.",
+        creative: "Produced photorealistic 3D architectural cinema tours, an editorial print lookbook, and a bespoke interactive penthouse configurator with private booking concierge.",
+        outcome: "The entire initial release was 100% pre-sold 4 months ahead of schedule, setting a record price per square foot in the metropolitan submarket."
+      },
+      {
+        title: "Verdant Health — Compliant Omni-Channel Patient Intake",
+        client: "Verdant Health Systems",
+        industry: "Healthcare & Life Sciences",
+        metric: "-41% Cost Per Patient Intake | +180% Clinic Consultations",
+        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
+        challenge: "Verdant needed to scale appointment bookings across 32 regional wellness facilities without violating strict HIPAA compliance guidelines or relying on invasive third-party ad pixels.",
+        strategy: "AD AGENCY implemented server-side tracking (CAPI), local SEO topical hubs, and an intuitive mobile-first digital intake experience that simplified insurance pre-verification.",
+        creative: "Humanized storytelling campaigns focusing on empathetic patient outcomes, certified physician video introductions, and streamlined UI intake states.",
+        outcome: "Reduced patient acquisition cost by 41% across all clinics while increasing initial consultation attendance to 94% through automated SMS follow-ups."
+      }
+    ];
+
+    // SERVICE DETAILS DATA STORE
+    const serviceDetails = {
+      performance: {
+        title: "Performance Marketing & Paid Media",
+        desc: "We engineer full-funnel acquisition pipelines utilizing algorithmic bidding, predictive audience cohorts, and multi-touch revenue attribution."
+      },
+      social: {
+        title: "Social Media & Brand Communication",
+        desc: "Cultivating dedicated brand advocates through daily editorial curation, creator partnerships, and cultural resonance across contemporary channels."
+      },
+      creative: {
+        title: "Creative Production & Video Advertising",
+        desc: "High-craft cinema video, 3D motion design, and modular creative asset generation designed to interrupt feeds and convert viewers into customers."
+      },
+      web: {
+        title: "Enterprise Web Architecture & CRO",
+        desc: "Sub-second headless web applications, conversion-engineered landing funnels, and continuous multivariate testing."
+      },
+      branding: {
+        title: "Brand Strategy & Corporate Identity",
+        desc: "Unassailable market positioning, corporate design systems, verbal style guidelines, and enterprise brand governance."
+      },
+      seo: {
+        title: "Search & Organic Market Dominance",
+        desc: "Technical SEO audits, semantic content clustering, and authoritative digital PR that secures dominant organic visibility."
+      }
+    };
+
+    // SPA NAVIGATION CONTROLLER
+    function switchPage(pageId) {
+      const views = document.querySelectorAll('.page-view');
+      views.forEach(v => v.classList.remove('active'));
+
+      const target = document.getElementById(`view-${pageId}`);
+      if (target) {
+        target.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Update Nav Buttons
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        if (btn.getAttribute('data-target') === pageId) {
+          btn.classList.add('text-white', 'bg-brand-surfaceHover');
+          btn.classList.remove('text-brand-textMuted');
+        } else {
+          btn.classList.remove('text-white', 'bg-brand-surfaceHover');
+          btn.classList.add('text-brand-textMuted');
+        }
+      });
+
+      // Close mobile drawer if open
+      document.getElementById('mobileMenu').classList.add('hidden');
+      document.getElementById('menuIcon').className = 'fa-solid fa-bars text-base';
+    }
+
+    function mobileNav(pageId) {
+      switchPage(pageId);
+    }
+
+    // MOBILE MENU TOGGLE
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        if (isHidden) {
+          mobileMenu.classList.remove('hidden');
+          menuIcon.className = 'fa-solid fa-xmark text-base';
+        } else {
+          mobileMenu.classList.add('hidden');
+          menuIcon.className = 'fa-solid fa-bars text-base';
+        }
+      });
+    }
+
+    // CASE STUDY MODAL HANDLERS
+    function openCaseStudyModal(index) {
+      const data = caseStudies[index];
+      if (!data) return;
+
+      const modalContent = document.getElementById('caseStudyModalContent');
+      modalContent.innerHTML = `
+        <div class="relative h-72 md:h-96 overflow-hidden">
+          <img src="${data.image}" alt="${data.title}" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/50 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <span class="text-xs font-mono uppercase tracking-widest text-blue-400 bg-black/60 px-3 py-1 rounded-full border border-white/10">${data.industry}</span>
+            <h2 class="text-2xl sm:text-3xl font-display font-bold text-white mt-2 leading-tight">${data.title}</h2>
+            <p class="text-xs font-mono text-emerald-400 font-semibold mt-1">${data.metric}</p>
+          </div>
+        </div>
+
+        <div class="p-6 md:p-10 space-y-6 max-h-[60vh] overflow-y-auto">
+          <div>
+            <h4 class="text-xs font-mono uppercase text-brand-primary tracking-widest">01 / The Business Challenge</h4>
+            <p class="text-sm text-slate-300 mt-2 leading-relaxed">${data.challenge}</p>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-6 pt-2">
+            <div>
+              <h4 class="text-xs font-mono uppercase text-indigo-400 tracking-widest">02 / Research &amp; Strategic Approach</h4>
+              <p class="text-xs text-brand-textMuted mt-2 leading-relaxed">${data.strategy}</p>
+            </div>
+            <div>
+              <h4 class="text-xs font-mono uppercase text-cyan-400 tracking-widest">03 / Creative &amp; Media Execution</h4>
+              <p class="text-xs text-brand-textMuted mt-2 leading-relaxed">${data.creative}</p>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-brand-dark border border-brand-border">
+            <h4 class="text-xs font-mono uppercase text-emerald-400 tracking-widest">04 / Illustrative Commercial Outcome</h4>
+            <p class="text-sm font-medium text-white mt-2 leading-relaxed">${data.outcome}</p>
+            <span class="text-[10px] text-brand-textSubtle block mt-2 font-mono">[ Figures presented as illustrative concept benchmarks ]</span>
+          </div>
+
+          <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-brand-border">
+            <div>
+              <p class="text-xs font-bold text-white">Inspired by this project?</p>
+              <p class="text-[11px] text-brand-textMuted">Let's discuss how similar models apply to your organization.</p>
+            </div>
+            <button onclick="closeCaseStudyModal(); switchPage('contact');" class="bg-brand-primary hover:bg-brand-primaryHover text-white px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all">
+              Discuss Similar Initiative
+            </button>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('caseStudyModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCaseStudyModal() {
+      document.getElementById('caseStudyModal').classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    // SERVICE MODAL HANDLERS
+    function openServiceModal(key) {
+      const data = serviceDetails[key];
+      if (!data) return;
+
+      const body = document.getElementById('serviceModalBody');
+      body.innerHTML = `
+        <span class="text-xs font-mono text-brand-primary tracking-widest uppercase">Service Overview</span>
+        <h3 class="text-2xl font-display font-bold text-white mt-1 mb-3">${data.title}</h3>
+        <p class="text-sm text-brand-textMuted leading-relaxed mb-6">${data.desc}</p>
+        <div class="p-4 rounded-2xl bg-brand-dark/80 border border-brand-border text-xs text-slate-300 space-y-2 mb-6">
+          <p><i class="fa-solid fa-check text-blue-400 mr-2"></i> Dedicated multidisciplinary squad alignment.</p>
+          <p><i class="fa-solid fa-check text-blue-400 mr-2"></i> Custom weekly sprints &amp; transparent KPI review.</p>
+          <p><i class="fa-solid fa-check text-blue-400 mr-2"></i> Full ownership of all creative raw files and media pixels.</p>
+        </div>
+        <button onclick="closeServiceModal(); switchPage('contact');" class="w-full bg-brand-primary hover:bg-brand-primaryHover text-white py-3 rounded-xl font-semibold text-xs uppercase tracking-wider transition-all">
+          Schedule Capability Consultation
+        </button>
+      `;
+
+      document.getElementById('serviceModal').classList.remove('hidden');
+    }
+
+    function closeServiceModal() {
+      document.getElementById('serviceModal').classList.add('hidden');
+    }
+
+    // ACCORDION TOGGLE
+    function toggleFaq(btn) {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector('i');
+      const isHidden = content.classList.contains('hidden');
+
+      // Close other FAQs
+      document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+      document.querySelectorAll('.faq-toggle i').forEach(ic => ic.style.transform = 'rotate(0deg)');
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    }
+
+    // PORTFOLIO FILTER
+    function filterWork(cat, btn) {
+      document.querySelectorAll('.work-filter-btn').forEach(b => {
+        b.classList.remove('bg-brand-primary', 'text-white');
+        b.classList.add('text-brand-textMuted');
+      });
+      btn.classList.add('bg-brand-primary', 'text-white');
+      btn.classList.remove('text-brand-textMuted');
+
+      const cards = document.querySelectorAll('.portfolio-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // CONTACT FORM SUBMISSION DEMO
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const feedback = document.getElementById('formFeedback');
+      const submitBtn = document.getElementById('submitBtn');
+      const name = document.getElementById('formName').value;
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Transmitting Request...';
+
+      setTimeout(() => {
+        feedback.className = 'p-4 rounded-xl text-xs font-medium bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 block';
+        feedback.innerHTML = `
+          <strong>Inquiry Logged:</strong> Thank you, ${name}. Your consultation request has been submitted to the AD AGENCY client partners team in simulation mode. An executive response will follow shortly.
+        `;
+        submitBtn.innerHTML = '<i class="fa-solid fa-check mr-2"></i> Inquiry Received';
+        document.getElementById('contactForm').reset();
+
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Submit Consultation Request';
+        }, 5000);
+      }, 1200);
+    }
+
+    // TIMED 15-SECOND CONSULTATION PROMPT
+    let promptDismissed = false;
+    setTimeout(() => {
+      if (!promptDismissed) {
+        const promptEl = document.getElementById('timedConsultationPrompt');
+        if (promptEl) {
+          promptEl.classList.remove('hidden');
+          setTimeout(() => {
+            promptEl.classList.remove('translate-y-8', 'opacity-0');
+          }, 50);
+        }
+      }
+    }, 15000);
+
+    function dismissTimedPrompt() {
+      promptDismissed = true;
+      const promptEl = document.getElementById('timedConsultationPrompt');
+      if (promptEl) {
+        promptEl.classList.add('translate-y-8', 'opacity-0');
+        setTimeout(() => promptEl.classList.add('hidden'), 500);
+      }
+    }
+
+    // HEADER SCROLL EFFECT
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('mainHeader');
+      if (window.scrollY > 40) {
+        header.classList.add('bg-brand-black/95', 'border-brand-border', 'py-3');
+        header.classList.remove('py-4', 'bg-brand-black/75', 'border-transparent');
+      } else {
+        header.classList.remove('bg-brand-black/95', 'border-brand-border', 'py-3');
+        header.classList.add('py-4', 'bg-brand-black/75', 'border-transparent');
+      }
+    });
+
+    // Close modals on ESC key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeCaseStudyModal();
+        closeServiceModal();
+      }
+    });
+  </script>
+</body>
+</html>
